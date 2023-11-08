@@ -4,6 +4,17 @@
     background-size: cover;
   }
 
+  section.center img {
+    display: block;
+    margin: auto;
+  }
+
+  img[alt=small-img] {
+    display: block;
+    margin: auto;
+    width: 30%;
+  }
+
   .transparent {
     background-color: transparent!important;
   }
@@ -12,8 +23,8 @@
     background-color: transparent!important;
   }
 
-  .transparent-table-tr-td-th {
-    background-color: rgba(0, 0, 0, 0.0) !important;
+  section.ttable table {
+    margin: auto;
   }
 
   .cabecalho {
@@ -79,12 +90,28 @@
   section.lead h2 {
     text-align: center;
   }
+  section.lead h3 {
+    text-align: center;
+  }
   
   .grid-50-50 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: justify;
   }
+
+  .grid-25-25-25-25 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: justify;
+  }
+
+  .grid-33-33-33 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: justify;
+  }
+
 
   .grid-66-33 {
     display: grid;
