@@ -14,7 +14,7 @@
 <h1 id="an%C3%A1lise-de-circuitos-el%C3%A9tricos">Análise de Circuitos Elétricos</h1>
 <h2 id="aula-08---an%C3%A1lise-do-regime-permanente-senoidal">Aula 08 - Análise do Regime Permanente Senoidal</h2>
 <p>Prof. M.Sc. Diego Ascânio Santos (<a href="mailto:ascanio@cefetmg.br">ascanio@cefetmg.br</a>)</p>
-<p>Aula baseada sobre o material do professor Dr. Emerson Gonçalves de Melo (<a href="mailto:emerdemelo@usp.br">emerdemelo@usp.br</a> - DEMAR EEL USP), da professora Drª. Thabatta Moreira Alves de Araújo (<a href="mailto:thabatta@cefetmg.br">thabatta@cefetmg.br</a> - DIGDDV) e da Khan Academy.</p>
+<p>Aula baseada sobre o material do professor Dr. Emerson Gonçalves de Melo (<a href="mailto:emerdemelo@usp.br">emerdemelo@usp.br</a> - DEMAR EEL USP), da professora Drª. Thabatta Moreira Alves de Araújo (<a href="mailto:thabatta@cefetmg.br">thabatta@cefetmg.br</a> - DIGDDV), da Khan Academy e da bibliografia padrão da disciplina.</p>
 <p>CEFET-MG DIGDDV - Divinópolis, 2023.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2">
@@ -225,6 +225,184 @@ V_{rms} &amp;= \frac{V_{m}}{\sqrt{2}}<br />
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
 <h2 id="exemplos-91-92-93-e-94-nilsson-riedel-10%C2%AA-ed">Exemplos 9.1, 9.2, 9.3 e 9.4 (NILSSON; RIEDEL 10ª Ed)</h2>
 <iframe src="https://diegoascanio.github.io/jupyterlite/lab?path=exemplos_9.1_9.2_9.3_9.4.ipynb" width=100% height=100%></iframe> 
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="lead" class="lead" style="--class:lead;">
+<h1 id="resposta-senoidal">Resposta Senoidal</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="transparent center" class="transparent center" style="--class:transparent center;">
+<h2 id="resposta-senoidal-1">Resposta Senoidal</h2>
+<div class="grid-50-50 regular">
+<div class="grid-element">
+<p>Queremos mostrar através da dificuldade da obtenção da resposta senoidal pelos métodos tradicionais de resolução de EDOs a importância de se ter alternativas simplificadas que sejam capazes de resolver esse tipo de problema. No nosso caso, a representação fasorial.</p>
+<p>Considere o circuito abaixo alimentado por uma tensão senoidal \(v_{s} = V_{m} \cos(\omega t + \phi)\).</p>
+
+<p><img src="https://i.imgur.com/9fiWK0d.png" alt="" /></p>
+<p>Por conveniência é considerado que \(I(0) = 0\) e o tempo só é contado a partir do instante em que a chave é fechada. Qual a função a resposta da corrente \(i(t)\) neste circuito RL?</p>
+</div>
+<div class="grid-element">
+<p>Sabemos pela LKT nas malhas:</p>
+<p>\[<br />
+\begin{align}<br />
+v_{s} &amp;= v_{R} + v_{L} \therefore \\<br />
+V_{m} \cos(\omega t + \phi) &amp;= R i(t) + L \frac{di(t)}{dt} \therefore \\<br />
+L \frac{di(t)}{dt} + R i(t) &amp;= V_{m} \cos(\omega t + \phi)<br />
+\end{align}<br />
+\]</p>
+<p>Não desenvolveremos a <a href="https://ava.cefetmg.br/mod/assign/view.php?id=107802">solução da EDO</a>, mas sim mostrar (e aceitar) que ela é dada por:</p>
+<p>\[<br />
+\begin{align}<br />
+i(t) &amp;= \frac{-V_{m}}{\sqrt{R^{2} + \omega^{2} L^{2}}} \cos(\phi - \theta) e^{-(\frac{R}{L}) t} \\<br />
+&amp;+ \frac{V_{m}}{\sqrt{R^{2} + \omega^{2} L^{2}}} \cos({\omega t + \phi - \theta}) \\<br />
+\end{align}<br />
+\]</p>
+<p>Onde \(\theta\) é o ângulo cuja tangente é \(\frac{\omega L}{R}\). Assim, se:<br />
+\[<br />
+\begin{align}<br />
+\tan{\theta} &amp;= \frac{\omega L}{R} \therefore \\<br />
+\theta &amp;= \arctan{\frac{\omega L}{R}}<br />
+\end{align}<br />
+\]</p>
+</div>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<h2 id="resposta-senoidal-2">Resposta Senoidal</h2>
+<div class="small">
+<p>As seguintes observações a respeito da corrente \(i(t) = \frac{-V_{m}}{\sqrt{R^{2} + \omega^{2} L^{2}}} \cos(\phi - \theta) e^{-(\frac{R}{L}) t} + \frac{V_{m}}{\sqrt{R^{2} + \omega^{2} L^{2}}} \cos({\omega t + \phi - \theta})\) têm de ser efetuadas:</p>
+<ol>
+<li>
+<p>A expressão \(\frac{-V_{m}}{\sqrt{R^{2} + \omega^{2} L^{2}}} \cos(\phi - \theta) e^{-(\frac{R}{L}) t}\) é denominada <strong>componente transitória</strong> da corrente, pois ela se torna infinitesimal (tende à zero) quando \(t \rightarrow \infty\).</p>
+</li>
+<li>
+<p>Já a segunda expressão \(\frac{V_{m}}{\sqrt{R^{2} + \omega^{2} L^{2}}} \cos({\omega t + \phi - \theta})\) é denominada <strong>componente do regime permanente</strong> da corrente e existirá enquanto a chave do circuito \(RL\) permanecer fechada.</p>
+<ol>
+<li>Será desenvolvida uma técnica para calcular diretamente a resposta do regime permanente (para não precisar resolver a EDO);
+<ul>
+<li>Entretanto, tal técnica não permite que a resposta do estado transitório ou a resposta total do sistema sejam obtidas de imediato;</li>
+</ul>
+</li>
+<li>Ao analisar esta segunda expressão verifica-se que a resposta do regime permanente é uma função senoidal;</li>
+<li>Que a frequência do sinal de resposta é a mesma do sinal oriundo da fonte de tensão;</li>
+<li>De modo geral, a amplitude máxima da resposta de regime permanente é diferente da amplitude máxima da tensão oriunda da fonte.
+<ul>
+<li>Neste caso, a amplitude máxima da resposta de regime permanente é dada por \(\frac{V_{m}}{\sqrt{R^{2} + \omega^{2} L^{2}}}\).</li>
+<li>E a amplitude máxima da tensão oriunda da fonte é dada por \(V_{m}\).</li>
+</ul>
+</li>
+<li>Por fim, é costume que o ângulo de fase do sinal da resposta seja diferente do ângulo de fase da fonte.
+<ul>
+<li>Neste caso do circuito \(RL\), o ângulo de fase da compomenente permanente da resposta é dado por \(\phi - \theta\).</li>
+<li>E o ângulo de fase da fonte é dado por \(\phi\).</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>Todas estas características nos ajudam a entender a motivação do <strong>método dos fasores</strong> — que nos ajuda a resolver as EDOs apenas pela análise da resposta do regime permanente (determinar a amplitude máxima da resposta do regime permanente e o ângulo de fase de seu sinal) quando sejam conhecidas a forma de onda e a frequência da resposta — abordado na sequência.</p>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="lead" class="lead" style="--class:lead;">
+<h1 id="m%C3%A9todo-dos-fasores">Método dos Fasores</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+<h2 id="fasores---m%C3%A9todo-dos-fasores">Fasores - Método dos Fasores</h2>
+<p>O método dos fasores é um método matemático que simplifica a análise de circuitos que operam em regime permanente senoidal. Fasores, como veremos na sequência, são representações complexas de ondas senoidais, onde as magnitudes e as fases das ondas são expressas como números complexos. Estas representações permitem transformar equações diferenciais em equações algébricas, o que simplifica muito a análise de circuitos.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+<h2 id="o-conceito-de-fasor">O Conceito de Fasor</h2>
+<div class="regular">
+<p>Fasor é um número complexo que contém as informações da amplitude e do ângulo de fase de uma função senoidal. Seu conceito fundamenta-se na identidade de Euler, que relaciona a função exponencial com a função trignométrica:</p>
+<p>\[<br />
+e^{\pm j\theta} = \cos(\theta) \pm j\sin(\theta)<br />
+\]</p>
+<p>Esta equação é importante porque nos fornece outra maneira de representar as funções trignométricas cosseno e seno. Podemos expressar a função cosseno como a parte real da função exponencial complexa, e a função seno como a parte imaginária da função exponencial complexa; como visto:</p>
+<p>\[<br />
+\begin{align}<br />
+\cos(\theta) &amp;= ℜ  \left\{ e^{j \theta} \right\} \\<br />
+\sin(\theta) &amp;= ℑ  \left\{ e^{j \theta} \right\}<br />
+\end{align}<br />
+\]</p>
+<p>ℜ (forma alternativa da letra R) e ℑ (forma alternativa da letra I) são operadores que extraem a parte real e a parte imaginária de um número complexo significando, respectivamente, <strong>ℜ : a parte real de</strong> e <strong>ℑ : a parte imaginária de</strong>.</p>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="transparent center" class="transparent center" style="--class:transparent center;">
+<h2 id="o-conceito-de-fasor-1">O Conceito de Fasor</h2>
+<div class="grid-50-50 regular">
+<div class="grid-element">
+<p>Voltemos agora ao nosso circuito \(RL\) com uma fonte de tensão senoidal \(v_{s}\) descrita por: \(v_{s}(t) = V_{m} \cos(\omega t + \phi)\).</p>
+</div>
+<div class="grid-element">
+
+<p><img src="https://i.imgur.com/9fiWK0d.png" alt="" /></p>
+</div>
+</div>
+<div class="regular">
+<p>Como preconizado pelo conceito da representação fasorial, podemos representar a função \(\cos(\theta)\) como a parte real ℜ  de um número complexo \(e^{j\theta}\), ou seja, \(\cos(\theta) = ℜ{e^{j\theta}}\) e podemos representar a função \(\sin(\theta)\) como a parte imaginária ℑ de um número complexo \(e^{j\theta}\), ou seja, \(\sin(\theta) = ℑ{e^{j\theta}}\).</p>
+<p>Se \(v_{s}(t) = V_{m} \cos(\omega t + \phi)\), então</p>
+<p>\[<br />
+\begin{align}<br />
+v_{s}(t) &amp;= ℜ\{V_{m} e^{j(\omega t + \phi)}\} \\<br />
+v_{s}(t) &amp;= ℜ\{V_{m} e^{j\phi} e^{j\omega t}\} \tag{3}<br />
+\end{align}<br />
+\]</p>
+<p>Quando aplicadas as devidas manipulações algébricas e trigonométricas (pag. 344 Circuitos Elétricos 10ª Ed.; NILSSON; RIEDEL).</p>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+<h2 id="o-conceito-de-fasor---transformada-fasorial">O Conceito de Fasor - Transformada Fasorial</h2>
+<div class="grid-50-50 regular">
+<div class="grid-element">
+<p>Continuemos nossa análise pela equação 3:</p>
+<p>\[<br />
+\begin{align}<br />
+v_{s}(t) &amp;= ℜ\{V_{m} e^{j\phi} e^{j\omega t}\} \tag{3}<br />
+\end{align}<br />
+\]</p>
+<p>A quantidade \(V_{m} e^{j \phi}\) é um número complexo que contém informações sobre a amplitude e o ângulo de fase da tensão senoidal \(V_{m} \cos(\omega t + \phi)\). Este número complexo \(V_{m} e^{j \phi}\) é, por definição, a <strong>representação do fasor</strong> (ou, <strong>transformada fasorial</strong>) da função senoidal dada.</p>
+<p>Assim, o fasor <strong>V</strong> é definido como:</p>
+<p>\[<br />
+\begin{align}<br />
+\mathbf{V} &amp;= V_{m} e^{j \phi} = Ƒ \left\{ V_{m} \cos(\omega t + \phi) \right\} \tag{4}<br />
+\end{align}<br />
+\]</p>
+<p>Onde a notação \(Ƒ \left\{ V_{m} \cos(\omega t + \phi) \right\}\) é lida como <strong>&quot;a transformada fasorial de \(V_{m} \cos(\omega t + \phi)\)&quot;</strong>.</p>
+</div>
+<div class="grid-element">
+<p>Preste bastante atenção neste conceito de <strong>transformada fasorial</strong>, pois, tal conceito é fundamental para a análise de circuitos em regime permanente senoidal.</p>
+<p>O que de fato significa uma transformada fasorial? É uma função de transformação que converte funções representadas no domínio do tempo (<strong>real</strong>) para o domínio dos números complexos, também conhecido como <strong>domínio da frequência</strong>.</p>
+<p>Como diferenciar uma variável representada no domínio do tempo de outra representada no domínio da frequência?</p>
+<ul>
+<li>Por convenção adotamos a notação de variáveis (fasores) no domínio da frequência em negrito, como por exemplo, <strong>V</strong> na equação 4 e as variáveis no domínio do tempo não utilizamos destaques em seus nomes.</li>
+</ul>
+<p>Porque a transformada fasorial é importante? Porque, como veremos a seguir, ela permite reduzir a análise de circuitos em regime permanente senoidal a simples operações algébricas de números complexos.</p>
+</div>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+<h2 id="o-conceito-de-fasor---transformada-fasorial-1">O Conceito de Fasor - Transformada Fasorial</h2>
+<div class="regular">
+<p>Retomemos nossa análise do fasor \(\mathbf{V}\) da equação 4:</p>
+<p>\[<br />
+\begin{align}<br />
+\mathbf{V} &amp;= V_{m} e^{j \phi} = Ƒ \left\{ V_{m} \cos(\omega t + \phi) \right\} \tag{4}<br />
+\end{align}<br />
+\]</p>
+<p>Como vimos no slide anterior \(Ƒ \left\{ V_{m} \cos(\omega t + \phi) \right\} \) é a transformada fasorial de \(V_{m} \cos(\omega t + \phi)\).</p>
+<p>A equação 4 — \(\mathbf{V} = V_{m} e^{j \phi}\) — é a forma polar do fasor \(\mathbf{V}\) (no sistema de coordenadas polares).</p>
+<p>Também é possível expressar o fasor \(\mathbf{V}\) no sistema de coordenadas retangulares (ou cartesianas) como:</p>
+<p>\[<br />
+\begin{align}<br />
+\mathbf{V} = V_{m} \cos(\phi) + j V_{m} \sin(\phi) \tag{5}<br />
+\end{align}<br />
+\]</p>
+<p>E por meio da notação angular:</p>
+<p>\[<br />
+\begin{align}<br />
+\mathbf{V} = V_{m} \angle \phi \tag{6}<br />
+\end{align}<br />
+\]</p>
+<p>Todas estas notações são bastante úteis em aplicações do conceito de fasor na análise de circuitos e usaremos extensivamente a notação angular nos próximos conteúdos.</p>
+</div>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{constructor(){super(),this.svgPreserveAspectRatio="xMinYMid meet";const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){var t,s,o,r,a;this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=null!==(t=this.shadowRoot.querySelector(`div[${e}]`))&&void 0!==t?t:void 0;const l=this.svg;this.svg=null!==(o=null===(s=this.wrapper)||void 0===s?void 0:s.querySelector(`svg[${i}]`))&&void 0!==o?o:void 0,this.svg!==l&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=null!==(a=null===(r=this.svg)||void 0===r?void 0:r.querySelector(`span[${n}]`))&&void 0!==a?a:void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){var t,e,i,n,s,o,r;let a=Math.ceil(null!==(e=null===(t=this.containerSize)||void 0===t?void 0:t.width)&&void 0!==e?e:0);const l=Math.ceil(null!==(n=null===(i=this.containerSize)||void 0===i?void 0:i.height)&&void 0!==n?n:0);void 0!==this.dataset.downscaleOnly&&(a=Math.max(a,null!==(o=null===(s=this.wrapperSize)||void 0===s?void 0:s.width)&&void 0!==o?o:0));const c=null===(r=this.svg)||void 0===r?void 0:r.querySelector(":scope > foreignObject");if(null==c||c.setAttribute("width",`${a}`),null==c||c.setAttribute("height",`${l}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${a} ${l}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=a<=0||l<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const o=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this.attachShadow({mode:"open"})}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_update(){const t=i?`<style>:host { ${i} }</style>`:"";let e="<slot></slot>";const{autoScaling:n}=this.dataset;if(void 0!==n){e=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===n?"data-downscale-only":""}>${e}</marp-auto-scaling>`}this.shadowRoot.innerHTML=t+e}};let r;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),g=Symbol();const h=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,o,r;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(r=null===(o=n.y)||void 0===o?void 0:o.baseVal.value)&&void 0!==r?r:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await h()}finally{s=!0}})();const o=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(o)};return o(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const b=Symbol(),w=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();null!=r||(r=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is")),r&&a!==HTMLElement?i||customElements.define(s,o(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,o(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[b])return e[b];const i=v({target:e}),n=()=>{i(),delete e[b]},l=Object.assign(n,{cleanup:n,update:()=>w(e)});return Object.defineProperty(e,b,{configurable:!0,value:l}),l},y=document.currentScript;w(y?y.getRootNode():document)}();
 </script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>O Valor eficaz é útil porque possibilita calcular a potência dissipada por uma carga como se tal carga estivesse submetida a uma tensão contínua (facilitando o projeto de sistemas elétricos).</p><p>Com isso, verificamos que o valor eficaz de uma tensão senoidal depende somente da amplitude da tensão e não do ângulo de fase (ou da sua frequência)
