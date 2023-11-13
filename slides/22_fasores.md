@@ -26,7 +26,7 @@ E por meio da notação angular:
 
 \\[
 \\begin{align}
-    \\mathbf{V} = V_{m} \\angle \\phi \tag{6}
+    \\mathbf{V} = V_{m} \\angle \\phi \equiv V_{m} e^{j \\phi} \tag{6}
 \\end{align}
 \\]
 

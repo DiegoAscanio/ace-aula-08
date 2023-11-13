@@ -703,10 +703,256 @@ E por meio da notação angular:
 
 \\[
 \\begin{align}
-    \\mathbf{V} = V_{m} \\angle \\phi \tag{6}
+    \\mathbf{V} = V_{m} \\angle \\phi \equiv V_{m} e^{j \\phi} \tag{6}
 \\end{align}
 \\]
 
 Todas estas notações são bastante úteis em aplicações do conceito de fasor na análise de circuitos e usaremos extensivamente a notação angular nos próximos conteúdos.
 
 </div>
+
+
+---
+
+## O Conceito de Fasor - Transformada Fasorial Inversa
+
+<div class="regular">
+
+Até o momento fizemos a transformada fasorial da função senoidal \\(v_{s}(t)\\), entretanto, é possível fazer o processo inverso, transformar uma representação fasorial \\(\\mathbf{V}\\) em uma função senoidal \\(v_{s}(t)\\), ou seja, escrever para um fasor a expressão de sua funão senoidal equivalente.
+
+Consideremos o fasor \\(\\mathbf{V} = {100} \angle {-26°} \\).
+
+Como escolhemos usar a função cosseno como função senóide para tensão, temos que sua representação senoidal é:
+
+\\[v_{s}(t) = 100 \cos(\omega t - 26°)\\]
+
+Somente com as informações contidas na representação fasorial não é possível deduzir o valor de \\(\omega\\), pois, ele contém somente as informações de amplitude e de fase. A ação de converter a transformada fasorial para sua expressão no domínio do tempo é denominada de **transformada inversa fasorial** e é representada pela equação:
+
+\\[
+Ƒ^{-1} \\{ V_{m} e^{j \phi} \\} = ℜ  \left\\{ V_{m} e^{j \phi} e^{j \omega t} \right\\} \tag{7}
+\\]
+
+</div>
+
+
+---
+
+## O Conceito de Fasor - Transformada Fasorial Inversa
+
+<div class="regular">
+
+\\[
+Ƒ^{-1} \\{ V_{m} e^{j \phi} \\} = ℜ  \left\\{ V_{m} e^{j \phi} e^{j \omega t} \right\\} \tag{7}
+\\]
+
+Estudando a equação 7, o termo a esquerda, \\(Ƒ^{-1} \\{ V_{m} e^{j \phi} \\}\\), representa a própria **transformada fasorial inversa** e o termo a direita, \\(ℜ  \left\\{ V_{m} e^{j \phi} e^{j \omega t} \right\\}\\) , indica como devemos obter a transformada fasorial a inversa, ou seja, devemos multiplicar o fasor \\(V_{m} e^{j \phi}\\) por \\(e^{j \omega t}\\) e, então, extrair a parte real do resultado.
+
+Reiterando, a transformada fasorial é valiosa porque permite determinar a amplitude máxima e o ângulo de fase da resposta permanente senoidal pela álgebra de números complexos. As seguintes observações corroboram este fato:
+
+</div>
+
+<div class="regular grid-50-50" style="border: solid 2px #663399;">
+
+<div class="grid-element">
+
+1. A componente transitória da resposta senoidal se extingue à medida que o tempo passa. Portanto, quando \\(t \rightarrow \infty\\), a componente permanente é quem satisfaz a equação diferencial que descreve o sistema.
+2. Em um circuito linear estimulado por fontes senoidais, a resposta permanente também é senoidal com a mesma frequência da fonte.
+
+</div>
+
+<div class="grid-element">
+
+3. Usando a notação para \\(\cos(\theta) = ℜ \left\\{ e^{j \theta} \right\\}\\) é possível propor \\(ℜ \left\\{ A e^{j \beta} e^{j \omega t} \right\\}\\) como solução para o regime permanente do sistema, onde \\(A\\) é a amplitude máxima da resposta e \\(\beta\\) seu ângulo de fase.
+4. Quando substituímos a solução de regime permanente proposta na EDO do sistema, o termo exponencial \\(e^{j \omega t}\\) se cancela, deixando a solução para \\(A\\) e \\(\beta\\) no domínio dos números complexos.
+
+</div>
+
+</div>
+
+
+---
+
+## Transformada Fasorial — Verificação das Observações
+
+<div class="grid-50-50 regular">
+
+<div class="grid-element">
+
+Em relação as observações contidas no slide anterior, utilizaremos o circuito RL tema desta aula para verificar as observações.
+
+</div>
+
+<div class="grid-element">
+
+<!-- _class: transparent center -->
+![](https://i.imgur.com/9fiWK0d.png)
+
+</div>
+
+</div>
+
+<div class="regular">
+
+Pelo fato de utilizarmos uma função cossenoidal para descrever o sinal senoidal da nossa fonte de tensão, então, usamos a equação \\(\cos(\theta) = ℜ \left\\{ e^{j\theta} \right\\}\\) para fazer a transformada fasorial necessária. A grandeza de interesse (pelo exemplo do livro) é a corrente de regime permanente do circuito \\(i_{rp}(t)\\) que também é descrita por uma função senoidal do tipo cosseno, por conveniência.
+
+Considerando este fato, bem como que a amplitude da corrente é \\(I_{m}\\), logo, a representação fasorial da corrente de regime permanente é dada por:
+
+\\[
+    i_{rp} (t) = ℜ \left\\{I_{m} e^{j \beta} e^{j \omega t} \right\\}
+\\]
+
+Ou seja, \\(i_{rp}(t)\\) é dada pela parte real de \\(\left\\{I_{m} e^{j \beta} e^{j \omega t} \right\\}\\). Quando substituimos a corrente \\(i_{rp}(t)\\) pela sua representação fasorial na equação diferencial \\(L \frac{di(t)}{dt} + R i(t) = V_{m} \cos(\omega t + \phi) \\) que descreve o circuito RL, obtemos:
+
+\\[
+    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
+\\]
+
+</div>
+
+
+---
+
+## Transformada Fasorial — Verificação das Observações
+
+<div class="regular">
+
+\\[
+    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
+\\]
+
+Para deduzirmos esta equação 8, assumimos que tanto a diferenciação quanto a multiplicação por uma constante pode ser realizada na parte real de uma expressão. Também, reescrevemos o lado direito da equação 8 usando a notação fasorial que preconiza que \\(\cos(\theta) = ℜ \\left\\{e^{j \theta} \\right\\}\\).
+
+Pela álgebra de números complexos, sabemos que a soma das partes reais de números complexos é igual à parte real da soma destes números. Portanto, é possível reduzir o lado esquerdo da equação 8 para um único termo:
+
+\\[
+    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{ V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{9}
+\\]
+
+</div>
+
+
+---
+
+## Transformada Fasorial — Verificação das Observações
+
+<div class="regular">
+
+Porque escolhemos a função cosseno para ser nossa representação senoidal é que extraimos a parte real da função exponencial. Se tivéssemos escolhido a função seno para analisar o regime permanente senoidal, teríamos extraído a parte imaginária da função exponencial (pela notação fasorial) que preconiza que \\(\sin(\theta) = ℑ \\left\\{ e^{j \theta} \\right\\} \\). Portanto, se considerássemos a representação senoidal da corrente do regime permanente como uma função seno, nossa equação para o estado estacionário neste regime seria:
+
+\\[
+ℑ \\left\\{ (j \omega L + R) I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℑ \\left\\{ V_{m} e^{j \phi} e^{j \omega t} \\right\\} \tag{9}
+\\]
+
+Retomando agora a equação 8:
+
+\\[
+    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
+\\]
+
+Observe que as partes complexas e reais das equações 8 e 9 são iguais. Portanto,
+
+\\[
+    (j \omega L + R)I_{m} e^{j \beta} = V_{m} e^{j \phi} \\therefore \\\\
+    I_{m} e^{j \beta} = \\frac{V_{m} e^{j \phi}}{R + j \omega L} \\tag{10}
+\\]
+
+</div>
+
+
+
+
+---
+
+## Transformada Fasorial — Verificação das Observações
+
+<div class="regular">
+
+Na equação 10 — \\(I_{m} e^{j \beta} = \\frac{V_{m} e^{j \phi}}{R + j \omega L}\\) — Foi possível descartar \\(e^{j \omega t}\\) porque ele é comum a todos os termos da equação. Assim, para este circuito, devemos determinar as grandezas de interesse \\(I_{m}\\) e \\(\beta\\) pela manipulação algébrica das quantidades complexas \\(V_{m} e^{j \phi}\\) e \\(R + j \omega L\\). Observe que foram encontradas tanto a forma polar quanto a forma retangular.
+
+Por fim, devemos nos atentar ao fato que a transformada fasorial, juntamente com sua inversa, permite-nos transitar entre o domínio do tempo e o domínio da frequência. Por consequência, quando obtemos uma solução, estamos ou no domínio do tempo ou no domínio da frequência, mas, nunca nos dois ao mesmo tempo, por ser impossível e absurdo.
+
+
+</div>
+
+
+---
+
+## Transformada Fasorial — Verificação das Observações
+
+<div class="regular">
+
+Isso tudo que fizemos foi para formalizar dos princípios de transformações de coordenadas retangulares (domínio do tempo) para coordenadas polares (domínio da frequência) através de transformadas fasoriais que nos permitem a aplicação de técnicas algébricas complexas que simplificam a resolução de circuitos elétricos em regime permanente senoidal.
+
+Assim, isto implica na aplicação do princípio da superposição (de tensões e correntes) através das representações fasoriais, o que torna válido tanto a superposição de tensões (correntes) no domínio do tempo:
+
+\\[
+    v(t) = v_{1}(t) + v_{2}(t) + \cdots + v_{n}(t) \\\\
+    i(t) = i_{1}(t) + i_{2}(t) + \cdots + i_{n}(t)
+\\]
+
+Quanto no domínio da frequência:
+
+\\[
+    \textbf{V} = \textbf{\\(V_{1}\\)} + \textbf{\\(V_{2}\\)} + \cdots + \textbf{\\(V_{n}\\)} \\\\
+    \textbf{I} = \textbf{\\(I_{1}\\)} + \textbf{\\(I_{2}\\)} + \cdots + \textbf{\\(I_{n}\\)}
+\\]
+
+Portanto, a representação do fasor é a soma dos fasores dos termos individuais.
+
+Finalizado o arcabouço teórico que verifica a validade das transformadas fasoriais, veremos agora as operações algébricas de números complexos, que facilitam a análise dos circuitos no regime permanente senoidal.
+
+</div>
+
+
+---
+
+## Fasores - Números Complexos e relações entre formas retangulares e fasoriais
+
+<div class="regular">
+
+### Números Complexos — Pequena Revisão
+
+- ℂ é o conjunto dos números complexos, mais abrangente que o dos números reais (ℝ).
+- Compreendem valores compostos por uma parte real e uma parte imaginária (que representa raízes de números negativos: \\( i = \sqrt{-1} \\)).
+- Na engenharia elétrica e afins utilizamos a notação \\(j\\) para representar a parte imaginária, pois \\(i\\) é geralemente utilizada para representar a corrente elétrica.
+
+<!-- _class: transparent center -->
+![](https://i.imgur.com/TlU0ZlE.png)
+
+</div>
+
+
+---
+
+## Fasores - Operações Matemáticas sobre Números Complexos
+
+<div class="regular">
+
+Considerando \\(z_{1} = x_{1} + jy_{1}\\) e \\(z_{2} = x_{2} + jy_{2}\\):
+
+<!-- _class: transparent center -->
+![](https://i.imgur.com/mXrrDzU.png)
+
+</div>
+
+
+---
+
+## Fasores - Pequena tabela para conversão entre representações no domínio do tempo e no domínio da frequência
+
+<!-- _class: transparent center -->
+![](https://i.imgur.com/Vn5pbmi.png)
+
+
+---
+
+## Fasores - Relação entre integral e derivada no domínio do tempo e no domínio da frequência
+
+<!-- _class: transparent center -->
+![](https://i.imgur.com/SMAeXxV.png)
+
+
+---
+
+<!-- _class: lead -->
+# Exemplo 9.5
