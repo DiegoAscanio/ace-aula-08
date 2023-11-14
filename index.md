@@ -132,6 +132,10 @@
   img[alt=grid-img] {
     width: 100%;
   }
+  img[alt=slide-img] {
+    width: 75%;
+  }
+
 
 </style>
 
@@ -804,7 +808,7 @@ Considerando este fato, bem como que a amplitude da corrente é \\(I_{m}\\), log
 Ou seja, \\(i_{rp}(t)\\) é dada pela parte real de \\(\left\\{I_{m} e^{j \beta} e^{j \omega t} \right\\}\\). Quando substituimos a corrente \\(i_{rp}(t)\\) pela sua representação fasorial na equação diferencial \\(L \frac{di(t)}{dt} + R i(t) = V_{m} \cos(\omega t + \phi) \\) que descreve o circuito RL, obtemos:
 
 \\[
-    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
+    ℜ \\left\\{j \\omega L I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
 \\]
 
 </div>
@@ -817,7 +821,7 @@ Ou seja, \\(i_{rp}(t)\\) é dada pela parte real de \\(\left\\{I_{m} e^{j \beta}
 <div class="regular">
 
 \\[
-    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
+    ℜ \\left\\{j \\omega L I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
 \\]
 
 Para deduzirmos esta equação 8, assumimos que tanto a diferenciação quanto a multiplicação por uma constante pode ser realizada na parte real de uma expressão. Também, reescrevemos o lado direito da equação 8 usando a notação fasorial que preconiza que \\(\cos(\theta) = ℜ \\left\\{e^{j \theta} \\right\\}\\).
@@ -825,7 +829,7 @@ Para deduzirmos esta equação 8, assumimos que tanto a diferenciação quanto a
 Pela álgebra de números complexos, sabemos que a soma das partes reais de números complexos é igual à parte real da soma destes números. Portanto, é possível reduzir o lado esquerdo da equação 8 para um único termo:
 
 \\[
-    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{ V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{9}
+    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{ V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{9}
 \\]
 
 </div>
@@ -846,7 +850,7 @@ Porque escolhemos a função cosseno para ser nossa representação senoidal é 
 Retomando agora a equação 8:
 
 \\[
-    ℜ \\left\\{(j \\omega L + R)I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
+    ℜ \\left\\{j \\omega L I_{m} e^{j \beta} e^{j \omega t} \\right\\} + ℜ \\left\\{R I_{m} e^{j \beta} e^{j \omega t} \\right\\} = ℜ \\left\\{V_{m} e^{j \phi} e^{j \omega t} \\right\\} \\tag{8}
 \\]
 
 Observe que as partes complexas e reais das equações 8 e 9 são iguais. Portanto,
@@ -881,7 +885,7 @@ Por fim, devemos nos atentar ao fato que a transformada fasorial, juntamente com
 
 <div class="regular">
 
-Isso tudo que fizemos foi para formalizar dos princípios de transformações de coordenadas retangulares (domínio do tempo) para coordenadas polares (domínio da frequência) através de transformadas fasoriais que nos permitem a aplicação de técnicas algébricas complexas que simplificam a resolução de circuitos elétricos em regime permanente senoidal.
+Isso tudo que fizemos foi para formalizar os princípios de transformações do domínio do tempo para o domínio da frequência através de transformadas fasoriais que nos permitem a aplicação de técnicas algébricas complexas que simplificam a resolução de circuitos elétricos em regime permanente senoidal.
 
 Assim, isto implica na aplicação do princípio da superposição (de tensões e correntes) através das representações fasoriais, o que torna válido tanto a superposição de tensões (correntes) no domínio do tempo:
 
@@ -899,9 +903,17 @@ Quanto no domínio da frequência:
 
 Portanto, a representação do fasor é a soma dos fasores dos termos individuais.
 
-Finalizado o arcabouço teórico que verifica a validade das transformadas fasoriais, veremos agora as operações algébricas de números complexos, que facilitam a análise dos circuitos no regime permanente senoidal.
+Finalizado o arcabouço teórico que verifica a validade das transformadas fasoriais, veremos agora identidades trigonométricas, bem como, as operações algébricas de números complexos, que facilitam a análise dos circuitos no regime permanente senoidal.
 
 </div>
+
+
+---
+
+## Fasores — Identidades Trigonométricas
+
+<!-- _class: transparent center -->
+![slide-img](https://i.imgur.com/shE7UKe.png)
 
 
 ---

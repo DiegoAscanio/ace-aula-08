@@ -132,6 +132,10 @@
   img[alt=grid-img] {
     width: 100%;
   }
+  img[alt=slide-img] {
+    width: 75%;
+  }
+
 
 </style>
 

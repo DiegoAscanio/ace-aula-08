@@ -2,7 +2,7 @@
 
 <div class="regular">
 
-Isso tudo que fizemos foi para formalizar dos princípios de transformações de coordenadas retangulares (domínio do tempo) para coordenadas polares (domínio da frequência) através de transformadas fasoriais que nos permitem a aplicação de técnicas algébricas complexas que simplificam a resolução de circuitos elétricos em regime permanente senoidal.
+Isso tudo que fizemos foi para formalizar os princípios de transformações do domínio do tempo para o domínio da frequência através de transformadas fasoriais que nos permitem a aplicação de técnicas algébricas complexas que simplificam a resolução de circuitos elétricos em regime permanente senoidal.
 
 Assim, isto implica na aplicação do princípio da superposição (de tensões e correntes) através das representações fasoriais, o que torna válido tanto a superposição de tensões (correntes) no domínio do tempo:
 
@@ -20,6 +20,6 @@ Quanto no domínio da frequência:
 
 Portanto, a representação do fasor é a soma dos fasores dos termos individuais.
 
-Finalizado o arcabouço teórico que verifica a validade das transformadas fasoriais, veremos agora as operações algébricas de números complexos, que facilitam a análise dos circuitos no regime permanente senoidal.
+Finalizado o arcabouço teórico que verifica a validade das transformadas fasoriais, veremos agora identidades trigonométricas, bem como, as operações algébricas de números complexos, que facilitam a análise dos circuitos no regime permanente senoidal.
 
 </div>
