@@ -956,3 +956,21 @@ Considerando \\(z_{1} = x_{1} + jy_{1}\\) e \\(z_{2} = x_{2} + jy_{2}\\):
 
 <!-- _class: lead -->
 # Exemplo 9.5
+
+## Soma de cossenos usando-se fasores.
+
+Se \\(y_{1} = 20 \cos(\omega t - 30°) \text{ e } y_{2} = 40 \cos(\omega t + 60°)\\) expresse \\(y = y_{1} + y_{2}\\) como uma única função senoidal.
+
+a) Resolva o problema usando identidades trigonométricas.
+
+b) Resolva o problema usando o conceito de fasor.
+
+
+---
+
+<!-- _class: lead -->
+## Soma de cossenos usando-se fasores
+
+<center>
+<iframe width="727" height="409" src="https://www.youtube.com/embed/fbPHS42Dc8A" title="Me Salva! SEN07 - Soma Fasorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
