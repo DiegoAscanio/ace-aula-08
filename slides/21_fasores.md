@@ -34,7 +34,7 @@ O que de fato significa uma transformada fasorial? É uma função de transforma
 Como diferenciar uma variável representada no domínio do tempo de outra representada no domínio da frequência? 
 - Por convenção adotamos a notação de variáveis (fasores) no domínio da frequência em negrito, como por exemplo, **V** na equação 4 e as variáveis no domínio do tempo não utilizamos destaques em seus nomes.
 
-Porque a transformada fasorial é importante? Porque, como veremos a seguir, ela permite reduzir a análise de circuitos em regime permanente senoidal a simples operações algébricas de números complexos.
+Por que a transformada fasorial é importante? Porque, como veremos a seguir, ela permite reduzir a análise de circuitos em regime permanente senoidal a simples operações algébricas de números complexos.
 
 </div>
 
