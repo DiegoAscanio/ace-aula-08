@@ -326,206 +326,11 @@ e^{\pm j\theta} = \cos(\theta) \pm j\sin(\theta)<br />
 </div>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="transparent center" class="transparent center" style="--class:transparent center;">
-<h2 id="o-conceito-de-fasor-1">O Conceito de Fasor</h2>
-<div class="grid-50-50 regular">
-<div class="grid-element">
-<p>Voltemos agora ao nosso circuito \(RL\) com uma fonte de tensão senoidal \(v_{s}\) descrita por: \(v_{s}(t) = V_{m} \cos(\omega t + \phi)\).</p>
-</div>
-<div class="grid-element">
-
-<p><img src="https://i.imgur.com/9fiWK0d.png" alt="" /></p>
-</div>
-</div>
-<div class="regular">
-<p>Como preconizado pelo conceito da representação fasorial, podemos representar a função \(\cos(\theta)\) como a parte real ℜ  de um número complexo \(e^{j\theta}\), ou seja, \(\cos(\theta) = ℜ{e^{j\theta}}\) e podemos representar a função \(\sin(\theta)\) como a parte imaginária ℑ de um número complexo \(e^{j\theta}\), ou seja, \(\sin(\theta) = ℑ{e^{j\theta}}\).</p>
-<p>Se \(v_{s}(t) = V_{m} \cos(\omega t + \phi)\), então</p>
-<p>\[<br />
-\begin{align}<br />
-v_{s}(t) &amp;= ℜ\{V_{m} e^{j(\omega t + \phi)}\} \\<br />
-v_{s}(t) &amp;= ℜ\{V_{m} e^{j\phi} e^{j\omega t}\} \tag{3}<br />
-\end{align}<br />
-\]</p>
-<p>Quando aplicadas as devidas manipulações algébricas e trigonométricas (pag. 344 Circuitos Elétricos 10ª Ed.; NILSSON; RIEDEL).</p>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
-<h2 id="o-conceito-de-fasor---transformada-fasorial">O Conceito de Fasor - Transformada Fasorial</h2>
-<div class="grid-50-50 regular">
-<div class="grid-element">
-<p>Continuemos nossa análise pela equação 3:</p>
-<p>\[<br />
-\begin{align}<br />
-v_{s}(t) &amp;= ℜ\{V_{m} e^{j\phi} e^{j\omega t}\} \tag{3}<br />
-\end{align}<br />
-\]</p>
-<p>A quantidade \(V_{m} e^{j \phi}\) é um número complexo que contém informações sobre a amplitude e o ângulo de fase da tensão senoidal \(V_{m} \cos(\omega t + \phi)\). Este número complexo \(V_{m} e^{j \phi}\) é, por definição, a <strong>representação do fasor</strong> (ou, <strong>transformada fasorial</strong>) da função senoidal dada.</p>
-<p>Assim, o fasor <strong>V</strong> é definido como:</p>
-<p>\[<br />
-\begin{align}<br />
-\mathbf{V} &amp;= V_{m} e^{j \phi} = Ƒ \left\{ V_{m} \cos(\omega t + \phi) \right\} \tag{4}<br />
-\end{align}<br />
-\]</p>
-<p>Onde a notação \(Ƒ \left\{ V_{m} \cos(\omega t + \phi) \right\}\) é lida como <strong>&quot;a transformada fasorial de \(V_{m} \cos(\omega t + \phi)\)&quot;</strong>.</p>
-</div>
-<div class="grid-element">
-<p>Preste bastante atenção neste conceito de <strong>transformada fasorial</strong>, pois, tal conceito é fundamental para a análise de circuitos em regime permanente senoidal.</p>
-<p>O que de fato significa uma transformada fasorial? É uma função de transformação que converte funções representadas no domínio do tempo (<strong>real</strong>) para o domínio dos números complexos, também conhecido como <strong>domínio da frequência</strong>.</p>
-<p>Como diferenciar uma variável representada no domínio do tempo de outra representada no domínio da frequência?</p>
-<ul>
-<li>Por convenção adotamos a notação de variáveis (fasores) no domínio da frequência em negrito, como por exemplo, <strong>V</strong> na equação 4 e as variáveis no domínio do tempo não utilizamos destaques em seus nomes.</li>
-</ul>
-<p>Porque a transformada fasorial é importante? Porque, como veremos a seguir, ela permite reduzir a análise de circuitos em regime permanente senoidal a simples operações algébricas de números complexos.</p>
-</div>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
-<h2 id="o-conceito-de-fasor---transformada-fasorial-1">O Conceito de Fasor - Transformada Fasorial</h2>
-<div class="regular">
-<p>Retomemos nossa análise do fasor \(\mathbf{V}\) da equação 4:</p>
-<p>\[<br />
-\begin{align}<br />
-\mathbf{V} &amp;= V_{m} e^{j \phi} = Ƒ \left\{ V_{m} \cos(\omega t + \phi) \right\} \tag{4}<br />
-\end{align}<br />
-\]</p>
-<p>Como vimos no slide anterior \(Ƒ \left\{ V_{m} \cos(\omega t + \phi) \right\} \) é a transformada fasorial de \(V_{m} \cos(\omega t + \phi)\).</p>
-<p>A equação 4 — \(\mathbf{V} = V_{m} e^{j \phi}\) — é a forma polar do fasor \(\mathbf{V}\) (no sistema de coordenadas polares).</p>
-<p>Também é possível expressar o fasor \(\mathbf{V}\) no sistema de coordenadas retangulares (ou cartesianas) como:</p>
-<p>\[<br />
-\begin{align}<br />
-\mathbf{V} = V_{m} \cos(\phi) + j V_{m} \sin(\phi) \tag{5}<br />
-\end{align}<br />
-\]</p>
-<p>E por meio da notação angular:</p>
-<p>\[<br />
-\begin{align}<br />
-\mathbf{V} = V_{m} \angle \phi \equiv V_{m} e^{j \phi} \tag{6}<br />
-\end{align}<br />
-\]</p>
-<p>Todas estas notações são bastante úteis em aplicações do conceito de fasor na análise de circuitos e usaremos extensivamente a notação angular nos próximos conteúdos.</p>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
-<h2 id="o-conceito-de-fasor---transformada-fasorial-inversa">O Conceito de Fasor - Transformada Fasorial Inversa</h2>
-<div class="regular">
-<p>Até o momento fizemos a transformada fasorial da função senoidal \(v_{s}(t)\), entretanto, é possível fazer o processo inverso, transformar uma representação fasorial \(\mathbf{V}\) em uma função senoidal \(v_{s}(t)\), ou seja, escrever para um fasor a expressão de sua funão senoidal equivalente.</p>
-<p>Consideremos o fasor \(\mathbf{V} = {100} \angle {-26°} \).</p>
-<p>Como escolhemos usar a função cosseno como função senóide para tensão, temos que sua representação senoidal é:</p>
-<p>\[v_{s}(t) = 100 \cos(\omega t - 26°)\]</p>
-<p>Somente com as informações contidas na representação fasorial não é possível deduzir o valor de \(\omega\), pois, ele contém somente as informações de amplitude e de fase. A ação de converter a transformada fasorial para sua expressão no domínio do tempo é denominada de <strong>transformada inversa fasorial</strong> e é representada pela equação:</p>
-<p>\[<br />
-Ƒ^{-1} \{ V_{m} e^{j \phi} \} = ℜ  \left\{ V_{m} e^{j \phi} e^{j \omega t} \right\} \tag{7}<br />
-\]</p>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
-<h2 id="o-conceito-de-fasor---transformada-fasorial-inversa-1">O Conceito de Fasor - Transformada Fasorial Inversa</h2>
-<div class="regular">
-<p>\[<br />
-Ƒ^{-1} \{ V_{m} e^{j \phi} \} = ℜ  \left\{ V_{m} e^{j \phi} e^{j \omega t} \right\} \tag{7}<br />
-\]</p>
-<p>Estudando a equação 7, o termo a esquerda, \(Ƒ^{-1} \{ V_{m} e^{j \phi} \}\), representa a própria <strong>transformada fasorial inversa</strong> e o termo a direita, \(ℜ  \left\{ V_{m} e^{j \phi} e^{j \omega t} \right\}\) , indica como devemos obter a transformada fasorial a inversa, ou seja, devemos multiplicar o fasor \(V_{m} e^{j \phi}\) por \(e^{j \omega t}\) e, então, extrair a parte real do resultado.</p>
-<p>Reiterando, a transformada fasorial é valiosa porque permite determinar a amplitude máxima e o ângulo de fase da resposta permanente senoidal pela álgebra de números complexos. As seguintes observações corroboram este fato:</p>
-</div>
-<div class="regular grid-50-50" style="border: solid 2px #663399;">
-<div class="grid-element">
-<ol>
-<li>A componente transitória da resposta senoidal se extingue à medida que o tempo passa. Portanto, quando \(t \rightarrow \infty\), a componente permanente é quem satisfaz a equação diferencial que descreve o sistema.</li>
-<li>Em um circuito linear estimulado por fontes senoidais, a resposta permanente também é senoidal com a mesma frequência da fonte.</li>
-</ol>
-</div>
-<div class="grid-element">
-<ol start="3">
-<li>Usando a notação para \(\cos(\theta) = ℜ \left\{ e^{j \theta} \right\}\) é possível propor \(ℜ \left\{ A e^{j \beta} e^{j \omega t} \right\}\) como solução para o regime permanente do sistema, onde \(A\) é a amplitude máxima da resposta e \(\beta\) seu ângulo de fase.</li>
-<li>Quando substituímos a solução de regime permanente proposta na EDO do sistema, o termo exponencial \(e^{j \omega t}\) se cancela, deixando a solução para \(A\) e \(\beta\) no domínio dos números complexos.</li>
-</ol>
-</div>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="transparent center" class="transparent center" style="--class:transparent center;">
-<h2 id="transformada-fasorial--verifica%C3%A7%C3%A3o-das-observa%C3%A7%C3%B5es">Transformada Fasorial — Verificação das Observações</h2>
-<div class="grid-50-50 regular">
-<div class="grid-element">
-<p>Em relação as observações contidas no slide anterior, utilizaremos o circuito RL tema desta aula para verificar as observações.</p>
-</div>
-<div class="grid-element">
-
-<p><img src="https://i.imgur.com/9fiWK0d.png" alt="" /></p>
-</div>
-</div>
-<div class="regular">
-<p>Pelo fato de utilizarmos uma função cossenoidal para descrever o sinal senoidal da nossa fonte de tensão, então, usamos a equação \(\cos(\theta) = ℜ \left\{ e^{j\theta} \right\}\) para fazer a transformada fasorial necessária. A grandeza de interesse (pelo exemplo do livro) é a corrente de regime permanente do circuito \(i_{rp}(t)\) que também é descrita por uma função senoidal do tipo cosseno, por conveniência.</p>
-<p>Considerando este fato, bem como que a amplitude da corrente é \(I_{m}\), logo, a representação fasorial da corrente de regime permanente é dada por:</p>
-<p>\[<br />
-i_{rp} (t) = ℜ \left\{I_{m} e^{j \beta} e^{j \omega t} \right\}<br />
-\]</p>
-<p>Ou seja, \(i_{rp}(t)\) é dada pela parte real de \(\left\{I_{m} e^{j \beta} e^{j \omega t} \right\}\). Quando substituimos a corrente \(i_{rp}(t)\) pela sua representação fasorial na equação diferencial \(L \frac{di(t)}{dt} + R i(t) = V_{m} \cos(\omega t + \phi) \) que descreve o circuito RL, obtemos:</p>
-<p>\[<br />
-ℜ \left\{j \omega L I_{m} e^{j \beta} e^{j \omega t} \right\} + ℜ \left\{R I_{m} e^{j \beta} e^{j \omega t} \right\} = ℜ \left\{V_{m} e^{j \phi} e^{j \omega t} \right\} \tag{8}<br />
-\]</p>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
-<h2 id="transformada-fasorial--verifica%C3%A7%C3%A3o-das-observa%C3%A7%C3%B5es-1">Transformada Fasorial — Verificação das Observações</h2>
-<div class="regular">
-<p>\[<br />
-ℜ \left\{j \omega L I_{m} e^{j \beta} e^{j \omega t} \right\} + ℜ \left\{R I_{m} e^{j \beta} e^{j \omega t} \right\} = ℜ \left\{V_{m} e^{j \phi} e^{j \omega t} \right\} \tag{8}<br />
-\]</p>
-<p>Para deduzirmos esta equação 8, assumimos que tanto a diferenciação quanto a multiplicação por uma constante pode ser realizada na parte real de uma expressão. Também, reescrevemos o lado direito da equação 8 usando a notação fasorial que preconiza que \(\cos(\theta) = ℜ \left\{e^{j \theta} \right\}\).</p>
-<p>Pela álgebra de números complexos, sabemos que a soma das partes reais de números complexos é igual à parte real da soma destes números. Portanto, é possível reduzir o lado esquerdo da equação 8 para um único termo:</p>
-<p>\[<br />
-ℜ \left\{(j \omega L + R)I_{m} e^{j \beta} e^{j \omega t} \right\} = ℜ \left\{ V_{m} e^{j \phi} e^{j \omega t} \right\} \tag{9}<br />
-\]</p>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
-<h2 id="transformada-fasorial--verifica%C3%A7%C3%A3o-das-observa%C3%A7%C3%B5es-2">Transformada Fasorial — Verificação das Observações</h2>
-<div class="regular">
-<p>Porque escolhemos a função cosseno para ser nossa representação senoidal é que extraimos a parte real da função exponencial. Se tivéssemos escolhido a função seno para analisar o regime permanente senoidal, teríamos extraído a parte imaginária da função exponencial (pela notação fasorial) que preconiza que \(\sin(\theta) = ℑ \left\{ e^{j \theta} \right\} \). Portanto, se considerássemos a representação senoidal da corrente do regime permanente como uma função seno, nossa equação para o estado estacionário neste regime seria:</p>
-<p>\[<br />
-ℑ \left\{ (j \omega L + R) I_{m} e^{j \beta} e^{j \omega t} \right\} = ℑ \left\{ V_{m} e^{j \phi} e^{j \omega t} \right\} \tag{9}<br />
-\]</p>
-<p>Retomando agora a equação 8:</p>
-<p>\[<br />
-ℜ \left\{j \omega L I_{m} e^{j \beta} e^{j \omega t} \right\} + ℜ \left\{R I_{m} e^{j \beta} e^{j \omega t} \right\} = ℜ \left\{V_{m} e^{j \phi} e^{j \omega t} \right\} \tag{8}<br />
-\]</p>
-<p>Observe que as partes complexas e reais das equações 8 e 9 são iguais. Portanto,</p>
-<p>\[<br />
-(j \omega L + R)I_{m} e^{j \beta} = V_{m} e^{j \phi} \therefore \\<br />
-I_{m} e^{j \beta} = \frac{V_{m} e^{j \phi}}{R + j \omega L} \tag{10}<br />
-\]</p>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
-<h2 id="transformada-fasorial--verifica%C3%A7%C3%A3o-das-observa%C3%A7%C3%B5es-3">Transformada Fasorial — Verificação das Observações</h2>
-<div class="regular">
-<p>Na equação 10 — \(I_{m} e^{j \beta} = \frac{V_{m} e^{j \phi}}{R + j \omega L}\) — Foi possível descartar \(e^{j \omega t}\) porque ele é comum a todos os termos da equação. Assim, para este circuito, devemos determinar as grandezas de interesse \(I_{m}\) e \(\beta\) pela manipulação algébrica das quantidades complexas \(V_{m} e^{j \phi}\) e \(R + j \omega L\). Observe que foram encontradas tanto a forma polar quanto a forma retangular.</p>
-<p>Por fim, devemos nos atentar ao fato que a transformada fasorial, juntamente com sua inversa, permite-nos transitar entre o domínio do tempo e o domínio da frequência. Por consequência, quando obtemos uma solução, estamos ou no domínio do tempo ou no domínio da frequência, mas, nunca nos dois ao mesmo tempo, por ser impossível e absurdo.</p>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
-<h2 id="transformada-fasorial--verifica%C3%A7%C3%A3o-das-observa%C3%A7%C3%B5es-4">Transformada Fasorial — Verificação das Observações</h2>
-<div class="regular">
-<p>Isso tudo que fizemos foi para formalizar os princípios de transformações do domínio do tempo para o domínio da frequência através de transformadas fasoriais que nos permitem a aplicação de técnicas algébricas complexas que simplificam a resolução de circuitos elétricos em regime permanente senoidal.</p>
-<p>Assim, isto implica na aplicação do princípio da superposição (de tensões e correntes) através das representações fasoriais, o que torna válido tanto a superposição de tensões (correntes) no domínio do tempo:</p>
-<p>\[<br />
-v(t) = v_{1}(t) + v_{2}(t) + \cdots + v_{n}(t) \\<br />
-i(t) = i_{1}(t) + i_{2}(t) + \cdots + i_{n}(t)<br />
-\]</p>
-<p>Quanto no domínio da frequência:</p>
-<p>\[<br />
-\textbf{V} = \textbf{\(V_{1}\)} + \textbf{\(V_{2}\)} + \cdots + \textbf{\(V_{n}\)} \\<br />
-\textbf{I} = \textbf{\(I_{1}\)} + \textbf{\(I_{2}\)} + \cdots + \textbf{\(I_{n}\)}<br />
-\]</p>
-<p>Portanto, a representação do fasor é a soma dos fasores dos termos individuais.</p>
-<p>Finalizado o arcabouço teórico que verifica a validade das transformadas fasoriais, veremos agora identidades trigonométricas, bem como, as operações algébricas de números complexos, que facilitam a análise dos circuitos no regime permanente senoidal.</p>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="transparent center" class="transparent center" style="--class:transparent center;">
 <h2 id="fasores--identidades-trigonom%C3%A9tricas">Fasores — Identidades Trigonométricas</h2>
 
 <p><img src="https://i.imgur.com/shE7UKe.png" alt="slide-img" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="transparent center" class="transparent center" style="--class:transparent center;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="transparent center" class="transparent center" style="--class:transparent center;">
 <h2 id="fasores---n%C3%BAmeros-complexos-e-rela%C3%A7%C3%B5es-entre-formas-retangulares-e-fasoriais">Fasores - Números Complexos e relações entre formas retangulares e fasoriais</h2>
 <div class="regular">
 <h3 id="n%C3%BAmeros-complexos--pequena-revis%C3%A3o">Números Complexos — Pequena Revisão</h3>
@@ -538,7 +343,7 @@ i(t) = i_{1}(t) + i_{2}(t) + \cdots + i_{n}(t)<br />
 <p><img src="https://i.imgur.com/TlU0ZlE.png" alt="" /></p>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="transparent center" class="transparent center" style="--class:transparent center;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="transparent center" class="transparent center" style="--class:transparent center;">
 <h2 id="fasores---opera%C3%A7%C3%B5es-matem%C3%A1ticas-sobre-n%C3%BAmeros-complexos">Fasores - Operações Matemáticas sobre Números Complexos</h2>
 <div class="regular">
 <p>Considerando \(z_{1} = x_{1} + jy_{1}\) e \(z_{2} = x_{2} + jy_{2}\):</p>
@@ -546,24 +351,24 @@ i(t) = i_{1}(t) + i_{2}(t) + \cdots + i_{n}(t)<br />
 <p><img src="https://i.imgur.com/mXrrDzU.png" alt="" /></p>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-class="transparent center" class="transparent center" style="--class:transparent center;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="transparent center" class="transparent center" style="--class:transparent center;">
 <h2 id="fasores---pequena-tabela-para-convers%C3%A3o-entre-representa%C3%A7%C3%B5es-no-dom%C3%ADnio-do-tempo-e-no-dom%C3%ADnio-da-frequ%C3%AAncia">Fasores - Pequena tabela para conversão entre representações no domínio do tempo e no domínio da frequência</h2>
 
 <p><img src="https://i.imgur.com/Vn5pbmi.png" alt="" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-class="transparent center" class="transparent center" style="--class:transparent center;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="transparent center" class="transparent center" style="--class:transparent center;">
 <h2 id="fasores---rela%C3%A7%C3%A3o-entre-integral-e-derivada-no-dom%C3%ADnio-do-tempo-e-no-dom%C3%ADnio-da-frequ%C3%AAncia">Fasores - Relação entre integral e derivada no domínio do tempo e no domínio da frequência</h2>
 
 <p><img src="https://i.imgur.com/SMAeXxV.png" alt="" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-class="lead" class="lead" style="--class:lead;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="lead" class="lead" style="--class:lead;">
 <h1 id="exemplo-95">Exemplo 9.5</h1>
 <h2 id="soma-de-cossenos-usando-se-fasores">Soma de cossenos usando-se fasores.</h2>
 <p>Se \(y_{1} = 20 \cos(\omega t - 30°) \text{ e } y_{2} = 40 \cos(\omega t + 60°)\) expresse \(y = y_{1} + y_{2}\) como uma única função senoidal.</p>
 <p>a) Resolva o problema usando identidades trigonométricas.</p>
 <p>b) Resolva o problema usando o conceito de fasor.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="lead" class="lead" style="--class:lead;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="lead" class="lead" style="--class:lead;">
 <h2 id="soma-de-cossenos-usando-se-fasores-1">Soma de cossenos usando-se fasores</h2>
 <center>
 <iframe width="727" height="409" src="https://www.youtube.com/embed/fbPHS42Dc8A" title="Me Salva! SEN07 - Soma Fasorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
