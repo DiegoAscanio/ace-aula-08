@@ -93,6 +93,10 @@
   section.lead h3 {
     text-align: center;
   }
+  section.lead h4 {
+    text-align: center;
+  }
+
   
   .grid-50-50 {
     display: grid;
@@ -134,6 +138,15 @@
   }
   img[alt=slide-img] {
     width: 75%;
+  }
+
+  .dashedmargin {
+    border-style: dashed;
+  }
+
+  .solidmargin {
+    padding: 9px;
+    border-style: solid;
   }
 
 

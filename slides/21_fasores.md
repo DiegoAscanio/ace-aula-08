@@ -1,14 +1,12 @@
-## Fasores - Números Complexos e relações entre formas retangulares e fasoriais
+## Fasores
 
-<div class="regular">
+<div class="normal">
 
-### Números Complexos — Pequena Revisão
+**Nos circuitos elétricos que trabalharemos, excitados por uma única fonte senoidal, a frequência angular para cada elemento do circuito — resistor, indutor, capacitor — será a mesma da fonte, portanto, nas nossas análises, não precisamos considerar a todo instante a exponencial complexa da frequência angular \\(e^{j \omega t}\\). Precisamos considerar apenas o fasor \\(⨈ = r e^{j \phi}\\).**
 
-- ℂ é o conjunto dos números complexos, mais abrangente que o dos números reais (ℝ).
-- Compreendem valores compostos por uma parte real e uma parte imaginária (que representa raízes de números negativos: \\( i = \sqrt{-1} \\)).
-- Na engenharia elétrica e afins utilizamos a notação \\(j\\) para representar a parte imaginária, pois \\(i\\) é geralemente utilizada para representar a corrente elétrica.
-
-<!-- _class: transparent center -->
-![](https://i.imgur.com/TlU0ZlE.png)
+Existem três formas que utilizamos para representar um fasor ⨈ qualquer:
+1. Exponencial
+2. Polar
+3. Retangular
 
 </div>

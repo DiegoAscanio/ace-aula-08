@@ -1,4 +1,5 @@
-## Fasores - Relação entre integral e derivada no domínio do tempo e no domínio da frequência
+## Fasores - Utilidade das representações
 
-<!-- _class: transparent center -->
-![](https://i.imgur.com/SMAeXxV.png)
+Porque vimos estas representações?
+
+Vimos a representação exponencial, pois, as demais (polar e retangular) derivam-se dela e por fim, vimos tanto a representação polar quanto a representação retangular para ampliar nosso arsenal de ferramentas para realizar operações entre números complexos, pois, para a soma e subtração de números complexos, a representação retangular (cartesiana) é mais adequada, enquanto que para as demais operações, a representação polar é mais adequada como veremos a seguir.

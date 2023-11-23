@@ -1,10 +1,17 @@
-## Fasores - Operações Matemáticas sobre Números Complexos
+## Fasores - Representação Exponencial
 
 <div class="regular">
 
-Considerando \\(z_{1} = x_{1} + jy_{1}\\) e \\(z_{2} = x_{2} + jy_{2}\\):
+Considere um fasor \\(⨈\\) qualquer, de amplitude \\(r\\) e ângulo \\(\phi\\).
 
-<!-- _class: transparent center -->
-![](https://i.imgur.com/mXrrDzU.png)
+A representação exponencial do fasor é a que já conhecemos, dada por:
+
+\\[⨈ = r \cdot e^{j \phi}\\]
 
 </div>
+
+## Fasores - Representação Polar
+
+A forma polar de um fasor é obtida através da forma expoencial \\(r e^{j \phi}\\) e é simplesmente escrita pela notação angular envolvendo a amplitude \\(r\\) e o ângulo de fase \\(\phi\\):
+
+\\[⨈ = r \angle \phi\\]
