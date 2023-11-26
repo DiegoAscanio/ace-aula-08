@@ -633,13 +633,13 @@ Assim, podemos escrever \\(V(t)\\) como:
 
 **\\(r e^{j \phi}\\) também por si próprio é um número complexo e também é um fasor, por conter as informações da amplitude \\(r\\) da tensão e da fase \\(\phi\\) da tensão cossenoidal.**
 
-Assim, podemos chamar **\\(r e^{j \phi}\\) como o fasor \\(⨈ \\)** e portanto, a tensão \\(V(t)\\) pode ser escrita como:
+Assim, podemos chamar **\\(r e^{j \phi}\\) como o fasor \\(𝕍 \\)** e portanto, a tensão \\(V(t)\\) pode ser escrita como:
 
 \\[
-    V(t) = \Re\\{⨈ e^{j\omega t}\\}.
+    V(t) = \Re\\{𝕍 e^{j\omega t}\\}.
 \\]
 
-Que significa que \\(V(t)\\) é a parte real da função complexa resultante da multiplicação do fasor ⨈  por \\(e^{j(\omega t)}\\) e como sabemos, esta parte real, ao final da multiplicação, é dada por \\(r \cos(\omega t + \phi)\\).
+Que significa que \\(V(t)\\) é a parte real da função complexa resultante da multiplicação do fasor 𝕍  por \\(e^{j(\omega t)}\\) e como sabemos, esta parte real, ao final da multiplicação, é dada por \\(r \cos(\omega t + \phi)\\).
 
 **Por conveniência das nossas resoluções, escolheremos sempre a parte real das nossas exponenciais complexas — funções cosseno — e, por isso, não abordaremos suas partes imaginárias. Entretanto, nem por isso estamos livres de lidar com funções senos, por isso, veremos mais a frente identidades trigonométricas que habilitam a conversão de funções senos para cossenos.**
 
@@ -652,9 +652,9 @@ Que significa que \\(V(t)\\) é a parte real da função complexa resultante da 
 
 <div class="normal">
 
-**Nos circuitos elétricos que trabalharemos, excitados por uma única fonte senoidal, a frequência angular para cada elemento do circuito — resistor, indutor, capacitor — será a mesma da fonte, portanto, nas nossas análises, não precisamos considerar a todo instante a exponencial complexa da frequência angular \\(e^{j \omega t}\\). Precisamos considerar apenas o fasor \\(⨈ = r e^{j \phi}\\).**
+**Nos circuitos elétricos que trabalharemos, excitados por uma única fonte senoidal, a frequência angular para cada elemento do circuito — resistor, indutor, capacitor — será a mesma da fonte, portanto, nas nossas análises, não precisamos considerar a todo instante a exponencial complexa da frequência angular \\(e^{j \omega t}\\). Precisamos considerar apenas o fasor \\(𝕍 = r e^{j \phi}\\).**
 
-Existem três formas que utilizamos para representar um fasor ⨈ qualquer:
+Existem três formas que utilizamos para representar um fasor 𝕍 qualquer:
 1. Exponencial
 2. Polar
 3. Retangular
@@ -668,11 +668,11 @@ Existem três formas que utilizamos para representar um fasor ⨈ qualquer:
 
 <div class="regular">
 
-Considere um fasor \\(⨈\\) qualquer, de amplitude \\(r\\) e ângulo \\(\phi\\).
+Considere um fasor \\(𝕍\\) qualquer, de amplitude \\(r\\) e ângulo \\(\phi\\).
 
 A representação exponencial do fasor é a que já conhecemos, dada por:
 
-\\[⨈ = r \cdot e^{j \phi}\\]
+\\[𝕍 = r \cdot e^{j \phi}\\]
 
 </div>
 
@@ -680,7 +680,7 @@ A representação exponencial do fasor é a que já conhecemos, dada por:
 
 A forma polar de um fasor é obtida através da forma expoencial \\(r e^{j \phi}\\) e é simplesmente escrita pela notação angular envolvendo a amplitude \\(r\\) e o ângulo de fase \\(\phi\\):
 
-\\[⨈ = r \angle \phi\\]
+\\[𝕍 = r \angle \phi\\]
 
 
 ---
@@ -696,9 +696,9 @@ A forma retangular de um fasor é obtida pelas coordenadas cartesianas do ponto 
 <!-- _class: center transparent -->
 ![](https://i.imgur.com/wB3Df0c.png)
 
-E por isso, o fasor \\(⨈\\) é representado em sua forma retangular como:
+E por isso, o fasor \\(𝕍\\) é representado em sua forma retangular como:
 
-\\[ ⨈ = x + j y \\]
+\\[ 𝕍 = x + j y \\]
 
 </div>
 
@@ -786,23 +786,23 @@ Vimos a representação exponencial, pois, as demais (polar e retangular) deriva
 
 ### Adição (Subtração)
 
-Consideremos dois fasores na forma polar (exponencial) \\(⨈_{1} = r_{1} e^{j \theta_{1}} \text{ e } ⨈_{2} = r_{2} e^{j \theta_{2}}\\). A soma (subtração) de números complexos é mais fácil de ser realizada quando estes números complexos encontram-se nas coordenadas retangulares. Portanto, para somar (subtrair) dois fasores na forma polar (exponencial) é necessário convertê-los para a forma retangular. 
+Consideremos dois fasores na forma polar (exponencial) \\(𝕍_{1} = r_{1} e^{j \theta_{1}} \text{ e } 𝕍_{2} = r_{2} e^{j \theta_{2}}\\). A soma (subtração) de números complexos é mais fácil de ser realizada quando estes números complexos encontram-se nas coordenadas retangulares. Portanto, para somar (subtrair) dois fasores na forma polar (exponencial) é necessário convertê-los para a forma retangular. 
 
 **Se os fasores já estiverem representados em coordenadas cartesianas, não é necessário convertê-los. Como não é o caso presente, vamos proceder a conversão.**
 
-De acordo com o penúltimo slide, dois fasores estão na forma retangular quando podem ser escritos como \\(⨈ = x + jy\\). Ainda de acordo com esse slide, \\(x = r \cos \theta\\) e \\(y = r \sin \theta\\). 
+De acordo com o penúltimo slide, dois fasores estão na forma retangular quando podem ser escritos como \\(𝕍 = x + jy\\). Ainda de acordo com esse slide, \\(x = r \cos \theta\\) e \\(y = r \sin \theta\\). 
 
 <div class="grid-50-50">
 
 <div class="grid-element solidmargin">
 
-Aplicando esta obtenção de \\(x\\) e \\(y\\) para \\(⨈_{1}\\) e \\(⨈_{2}\\) temos:
+Aplicando esta obtenção de \\(x\\) e \\(y\\) para \\(𝕍_{1}\\) e \\(𝕍_{2}\\) temos:
 
 \\[
 \begin{align}
     x_{1} &= r_{1} \cos \theta_{1} \\\\
     y_{1} &= r_{1} \sin \theta_{1} \therefore \\\\
-    ⨈_{1} &= x_{1} + j y_{1} \tag{1} \\\\
+    𝕍_{1} &= x_{1} + j y_{1} \tag{1} \\\\
 \end{align}
 \\]
 
@@ -810,7 +810,7 @@ Aplicando esta obtenção de \\(x\\) e \\(y\\) para \\(⨈_{1}\\) e \\(⨈_{2}\\
 \begin{align}
     x_{2} &= r_{2} \cos \theta_{2} \\\\
     y_{2} &= r_{2} \sin \theta_{2} \therefore \\\\
-    ⨈_{2} &= x_{2} + j y_{2} \tag{2} 
+    𝕍_{2} &= x_{2} + j y_{2} \tag{2} 
 \end{align}
 \\]
 
@@ -818,21 +818,21 @@ Aplicando esta obtenção de \\(x\\) e \\(y\\) para \\(⨈_{1}\\) e \\(⨈_{2}\\
 
 <div class="grid-element solidmargin">
 
-Se quiseremos construir um \\(⨈_{3}\\) a partir da soma de \\(⨈_{1}\\) e \\(⨈_{2}\\) basta somar os termos reais e imaginários de \\(⨈_{1}\\) e \\(⨈_{2}\\) separadamente, como abaixo:
+Se quiseremos construir um \\(𝕍_{3}\\) a partir da soma de \\(𝕍_{1}\\) e \\(𝕍_{2}\\) basta somar os termos reais e imaginários de \\(𝕍_{1}\\) e \\(𝕍_{2}\\) separadamente, como abaixo:
 
 \\[
 \begin{align}
-    ⨈_{3} &= ⨈_{1} + ⨈_{2} = (x_{1} + j y_{1}) + (x_{2} + j y_{2}) \\\\
-    ⨈_{3} &= (x_{1} + x_{2}) + j (y_{1} + y_{2}) \tag{3}
+    𝕍_{3} &= 𝕍_{1} + 𝕍_{2} = (x_{1} + j y_{1}) + (x_{2} + j y_{2}) \\\\
+    𝕍_{3} &= (x_{1} + x_{2}) + j (y_{1} + y_{2}) \tag{3}
 \end{align}
 \\]
 
-E se \\(⨈_{4}\\) for a subtração de \\(⨈_{1}\\) e \\(⨈_{2}\\):
+E se \\(𝕍_{4}\\) for a subtração de \\(𝕍_{1}\\) e \\(𝕍_{2}\\):
 
 \\[
 \begin{align}
-    ⨈_{4} &= ⨈_{1} - ⨈_{2} = (x_{1} + j y_{1}) - (x_{2} + j y_{2}) \\\\
-    ⨈_{4} &= (x_{1} - x_{2}) + j (y_{1} - y_{2}) \tag{4}
+    𝕍_{4} &= 𝕍_{1} - 𝕍_{2} = (x_{1} + j y_{1}) - (x_{2} + j y_{2}) \\\\
+    𝕍_{4} &= (x_{1} - x_{2}) + j (y_{1} - y_{2}) \tag{4}
 \end{align}
 \\]
 
@@ -854,23 +854,23 @@ E se \\(⨈_{4}\\) for a subtração de \\(⨈_{1}\\) e \\(⨈_{2}\\):
 
 ### Multiplicação / Divisão
 
-Consideremos dois fasores na forma retangular\\(⨈_{1} = x_{1} + j y_{1} \text{ e } ⨈_{2} = x_{2} + j y_{2}\\). A multiplicação (divisão) de números complexos é mais fácil de ser realizada quando estes números complexos encontram-se nas coordenadas polares (em notação angular). Portanto, para multiplicar (dividir) dois fasores na forma retangular é necessário convertê-los para a forma polar. 
+Consideremos dois fasores na forma retangular\\(𝕍_{1} = x_{1} + j y_{1} \text{ e } 𝕍_{2} = x_{2} + j y_{2}\\). A multiplicação (divisão) de números complexos é mais fácil de ser realizada quando estes números complexos encontram-se nas coordenadas polares (em notação angular). Portanto, para multiplicar (dividir) dois fasores na forma retangular é necessário convertê-los para a forma polar. 
 
 **Se os fasores já estiverem representados em coordenadas polares, não é necessário convertê-los. Como não é o caso presente, vamos proceder a conversão.**
 
-De acordo com o antepenúltimo slide, dois fasores estão na forma polar quando podem ser escritos como \\(⨈ = r \angle \phi \\). Ainda de acordo com esse slide, \\(r = \sqrt{x^{2} + y^{2}}\\) e \\(\phi = {\tan}^{-1} \frac{y}{x}\\).
+De acordo com o antepenúltimo slide, dois fasores estão na forma polar quando podem ser escritos como \\(𝕍 = r \angle \phi \\). Ainda de acordo com esse slide, \\(r = \sqrt{x^{2} + y^{2}}\\) e \\(\phi = {\tan}^{-1} \frac{y}{x}\\).
 
 <div class="grid-50-50">
 
 <div class="grid-element solidmargin">
 
-Aplicando esta obtenção de \\(r\\) e \\(\phi\\) para \\(⨈_{1}\\) e \\(⨈_{2}\\) temos:
+Aplicando esta obtenção de \\(r\\) e \\(\phi\\) para \\(𝕍_{1}\\) e \\(𝕍_{2}\\) temos:
 
 \\[
 \begin{align}
     r_{1} &= \sqrt{{x_{1}}^2 + {y_{1}}^{2}} \\\\
     \phi_{1} &= {\tan}^{-1} \frac{y_{1}}{x_{1}} \therefore \\\\
-    ⨈_{1} &= r_{1} \angle \phi_{1} \tag{5} \\\\
+    𝕍_{1} &= r_{1} \angle \phi_{1} \tag{5} \\\\
 \end{align}
 \\]
 
@@ -878,7 +878,7 @@ Aplicando esta obtenção de \\(r\\) e \\(\phi\\) para \\(⨈_{1}\\) e \\(⨈_{2
 \begin{align}
     r_{2} &= \sqrt{{x_{2}}^2 + {y_{2}}^{2}} \\\\
     \phi_{2} &= {\tan}^{-1} \frac{y_{2}}{x_{2}} \therefore \\\\
-    ⨈_{2} &= r_{2} \angle \phi_{2} \tag{6} \\\\
+    𝕍_{2} &= r_{2} \angle \phi_{2} \tag{6} \\\\
 \end{align}
 \\]
 
@@ -886,21 +886,21 @@ Aplicando esta obtenção de \\(r\\) e \\(\phi\\) para \\(⨈_{1}\\) e \\(⨈_{2
 
 <div class="grid-element solidmargin">
 
-Se quiseremos construir um \\(⨈_{3}\\) a partir da multiplicação de \\(⨈_{1}\\) e \\(⨈_{2}\\) basta multiplicar as magnitudes das representações polares dos fasores \\(⨈_{1}\\) e \\(⨈_{2}\\) e somar seus ângulos de fases:
+Se quiseremos construir um \\(𝕍_{3}\\) a partir da multiplicação de \\(𝕍_{1}\\) e \\(𝕍_{2}\\) basta multiplicar as magnitudes das representações polares dos fasores \\(𝕍_{1}\\) e \\(𝕍_{2}\\) e somar seus ângulos de fases:
 
 \\[
 \begin{align}
-    ⨈_{3} &= ⨈_{1} * ⨈_{2} \therefore  \\\\
-    ⨈_{3} &= r_{1} r_{2} \angle \phi_{1} + \phi_{2}
+    𝕍_{3} &= 𝕍_{1} * 𝕍_{2} \therefore  \\\\
+    𝕍_{3} &= r_{1} r_{2} \angle \phi_{1} + \phi_{2}
 \end{align}
 \\]
 
-E se \\(⨈_{4}\\) for a divisão de \\(⨈_{1}\\) e \\(⨈_{2}\\):
+E se \\(𝕍_{4}\\) for a divisão de \\(𝕍_{1}\\) e \\(𝕍_{2}\\):
 
 \\[
 \begin{align}
-    ⨈_{4} &= \frac{⨈_{1}}{⨈_{2}} \therefore  \\\\
-    ⨈_{4} &= \frac{r_{1}}{r_{2}} \angle \phi_{1} - \phi_{2}
+    𝕍_{4} &= \frac{𝕍_{1}}{𝕍_{2}} \therefore  \\\\
+    𝕍_{4} &= \frac{r_{1}}{r_{2}} \angle \phi_{1} - \phi_{2}
 \end{align}
 \\]
 
@@ -924,23 +924,23 @@ E se \\(⨈_{4}\\) for a divisão de \\(⨈_{1}\\) e \\(⨈_{2}\\):
 
 Agora, as demais operações matemáticas necessárias de números complexos — **Inversão, Raiz Quadrada e Complexo Conjugado** — são realizadas nas representações polares dos números. Como as conversões já foram vistas e os detalhes das explicações da multiplicação e divisão são similares nestas operações, são mostradas apenas as fórmulas para cada uma destas operações.
 
-Considere o número complexo \\(⨈ = r e^{j \phi}\\).
+Considere o número complexo \\(𝕍 = r e^{j \phi}\\).
 
 <!-- _class: lead -->
 #### Inversão
 
-\\[⨈^{-1} = \frac{1}{⨈} = \frac{1}{r} \angle - \phi \\]
+\\[𝕍^{-1} = \frac{1}{𝕍} = \frac{1}{r} \angle - \phi \\]
 
 #### Raiz Quadrada
 
-\\[\sqrt{⨈} = \sqrt{r} \angle \frac{\phi}{2} \\]
+\\[\sqrt{𝕍} = \sqrt{r} \angle \frac{\phi}{2} \\]
 
 #### Complexo Conjugado
 
 \\[
 \begin{align}
-⨈ &= x + j y = r e^{j \phi} = r \angle \phi \\\\
-⨈^{*} &= x - j y = r e^{-j \phi} = r \angle - \phi \\\\
+𝕍 &= x + j y = r e^{j \phi} = r \angle \phi \\\\
+𝕍^{*} &= x - j y = r e^{-j \phi} = r \angle - \phi \\\\
 \end{align}
 \\]
 
@@ -949,14 +949,31 @@ Considere o número complexo \\(⨈ = r e^{j \phi}\\).
 
 ---
 
-## Identidades Trigonométricas
-### Pequena Revisão
+## Fasores — Operações Matemáticas
+### Integração e Derivação
 
 <div class="regular">
 
-Por muitas vezes lidarmos com operações de números complexos (em suas representações polares ou retângulares) que produzem funções do tipo seno nas suas resultantes, precisamos de idades trigonométricas para, quando necessário, convertermos as funções resultantes em funções do tipo cosseno, objetos da nossa disciplina.
+Considerando nossa função senoidal de tensão \\(v(t) = V_{m} \cos(\omega t + \phi)\\), temos:
 
-Assim, apresentamos a seguinte tabela de identidades.
+\\[
+\begin{align}
+    \frac{dv(t)}{dt} &= -\omega V_{m} \sin(\omega t + \phi) \\\\
+    \int v(t) dt &= \frac{\sin{\omega t + \phi}}{\omega} + K
+\end{align}
+\\]
+
+Na representação fasorial, podemos escrever \\(v(t) = 𝕍 e^{j \omega t}\\), e assim:
+Considerando apenas o fasor \\(𝕍\\), temos:
+
+\\[
+\begin{align}
+    \frac{d 𝕍 e^{j \omega t}}{dt} &= j \omega 𝕍 e^{j \omega t} \\\\
+    \int{𝕍 e^{j \omega t}} dt &= \frac{𝕍 e^{j \omega t}}{j \omega} + K
+\end{align}
+\\]
+
+Quando analisarmos as grandezas de interesse nos circuitos excitados por apenas uma fonte senoidal, podemos considerar apenas o fasor \\(𝕍\\) e desprezar o termo \\(e^{j \omega t}\\), pois ele não afeta o valor da grandeza em questão.
 
 </div>
 
@@ -969,11 +986,11 @@ Assim, apresentamos a seguinte tabela de identidades.
 
 Quando analisamos nossas funções de onda tão somente pelas suas componentes senoidais (e/ou cossenoidais) lidamos com estas funções no domínio do tempo.
 
-Quando nossa função é do tipo \\(v(t) = V_{m} \cos(\omega t + \phi)\\), sabemos que podemos representar \\(\cos(\omega t + \phi)\\) como a parte real do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Re(V_{m} e^{j(\omega t + \phi)}) = \Re(⨈ e^{\omega t}) \\). E quando é do tipo seno, sabemos que podemos representar nossa função seno como a parte imaginária do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Im(V_{m} e^{j(\omega t + \phi)}) = \Im(⨈ e^{\omega t}) \\).
+Quando nossa função é do tipo \\(v(t) = V_{m} \cos(\omega t + \phi)\\), sabemos que podemos representar \\(\cos(\omega t + \phi)\\) como a parte real do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Re(V_{m} e^{j(\omega t + \phi)}) = \Re(𝕍 e^{\omega t}) \\). E quando é do tipo seno, sabemos que podemos representar nossa função seno como a parte imaginária do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Im(V_{m} e^{j(\omega t + \phi)}) = \Im(𝕍 e^{\omega t}) \\).
 
 Voltando ao começo da aula, a **parte real de** ou a **parte imaginária de** representam **TRANSFORMADAS FASORIAIS**. E existem as transformadas fasoriais inversas que produzem cossenos e senos a partir de números complexos.
 
-Quando expressamos nossas funções como cossenos e senos, estamos no **domínio do tempo**. Mas quando aplicamos transformadas fasoriais à elas para encontrar números complexos que as produzam e fazemos nossas operações matemáticas com estes números complexos, pelo benefício da simplicidade da notação fasorial, mudamos para o **omínio da frequência**.
+Quando expressamos nossas funções como cossenos e senos, estamos no **domínio do tempo**. Mas quando aplicamos transformadas fasoriais à elas para encontrar números complexos que as produzam e fazemos nossas operações matemáticas com estes números complexos, pelo benefício da simplicidade da notação fasorial, mudamos para o **domínio da frequência**.
 
 Veremos agora nos próximos slides identidades e relações trigonométricas (necessárias para a resolução do exemplo 9.5 e para transformar senos em cossenos e vice-e-versa) e por fim, veremos na resolução do próprio exemplo 9.5 como a representação fasorial, obtida após as transformadas fasoriais, simplifica (e muito) a resolução de problemas de circuitos elétricos excitados por fontes senoidais — circuitos de corrente alternada.
 
@@ -985,25 +1002,61 @@ Veremos agora nos próximos slides identidades e relações trigonométricas (ne
 ## Identidades Trigonométricas
 ### Pequena Revisão
 
-<div class="regular">
+<div class="small">
 
-Por muitas vezes lidarmos com operações de números complexos (em suas representações polares ou retângulares) que produzem funções do tipo seno nas suas resultantes, precisamos de idades trigonométricas para, quando necessário, convertermos as funções resultantes em funções do tipo cosseno, objetos da nossa disciplina.
+Por muitas vezes lidarmos com operações de números complexos (em suas representações polares ou retângulares) que produzem funções do tipo seno nas suas resultantes, precisamos de identidades trigonométricas para, quando necessário, convertermos as funções resultantes em funções do tipo cosseno, objetos da nossa disciplina, ou funções do tipo seno, quando necessário.
 
-Assim, apresentamos a seguinte tabela de identidades.
+Assim, apresentamos a seguinte tabela de identidades:
+
+<div style="text-align: center;">
+
+**Identidades Trigonométricas**
+
+</div>
+
+<!-- _class: ttable -->
+|             Função              |                            Equivalência                             |      Equivalência      |
+|:-------------------------------:|:--------------------------------------------------------------------|------------------------|
+|       \\(\sin(A \pm B)\\)       |                \\(\sin(A)\cos(B) \pm \cos(A)\sin(B)\\)              |                        |
+|       \\(\cos(A \pm B)\\)       |                \\(\cos(A)\cos(B) \pm \sin(A)\sin(B)\\)              |                        |
+|  \\(\sin(\omega t \pm 180°)\\)  |    \\(\sin(\omega t) \cos(180°) \pm \cos(\omega t) \sin(180°)\\)    | \\(- \sin(\omega t)\\) |
+|  \\(\cos(\omega t \pm 180°)\\)  |    \\(\cos(\omega t) \cos(180°) \mp \sin(\omega t) \sin(180°)\\)    | \\(- \cos(\omega t)\\) |
+|  \\(\sin(\omega t \pm  90°)\\)  |    \\(\sin(\omega t) \cos( 90°) \pm \cos(\omega t) \sin( 90°)\\)    |\\(\pm \cos(\omega t)\\)|
+|  \\(\cos(\omega t \pm  90°)\\)  |    \\(\cos(\omega t) \cos( 90°) \mp \sin(\omega t) \sin( 90°)\\)    |\\(\mp \sin(\omega t)\\)|
 
 </div>
 
 
 ---
 
-## Identidades Trigonométricas
-### Pequena Revisão
+## Fasores — Pequena tabela para conversão entre representações no domínio do tempo e no domínio da frequência
 
-<div class="regular">
+<div class="footnotesize">
 
-Por muitas vezes lidarmos com operações de números complexos (em suas representações polares ou retângulares) que produzem funções do tipo seno nas suas resultantes, precisamos de idades trigonométricas para, quando necessário, convertermos as funções resultantes em funções do tipo cosseno, objetos da nossa disciplina.
+A partir do que verificamos no slide anterior estabelecemos esta pequena tabela para conversão entre representações no domínio do tempo e no domínio da frequência:
 
-Assim, apresentamos a seguinte tabela de identidades.
+<!-- _class: ttable -->
+|              Domínio do tempo            |                                              |       Domínio da frequência       |
+|:----------------------------------------:|:--------------------------------------------:|:---------------------------------:|
+|         **Representação Temporal**       | **Conversão Para Representação Cossenoidal** |     **Representação Fasorial**    | 
+| \\(v(t) = V_{m} \cos(\omega t + \phi)\\) |                 Não se Aplica                | \\(𝕍 = V_{m} \angle \phi\\)       |
+| \\(v(t) = V_{m} \sin(\omega t + \phi)\\) |    \\(V_{m} \cos(\omega t + \phi - 90°)\\)   | \\(𝕍 = V_{m} \angle \phi - 90°\\) |
+| \\(i(t) = I_{m} \cos(\omega t + \phi)\\) |                 Não se Aplica                | \\(𝕀 = I_{m} \angle \phi\\)       |
+| \\(i(t) = I_{m} \sin(\omega t + \phi)\\) |    \\(I_{m} \cos(\omega t + \phi - 90°)\\)   | \\(𝕀 = I_{m} \angle \phi - 90°\\) |
+
+Por fim, lembramos que um ângulo \\(\phi\\) em graus pode ser expresso em radianos como:
+
+\\[ 
+\phi_{\text{rad}} = \frac{\pi}{180} \phi_{°} 
+\\]
+
+E um ângulo \\(\phi\\) em radianos pode ser expresso em graus como:
+
+\\[
+\phi_{°} = \frac{180}{\pi} \phi_{\text{rad}}
+\\]
+
+Assim, agora dispomos de todas as ferramentas necessárias para realizar operações de números complexos através de fasores (domínio da frequência) como também, com suas funções senoidais (domínio do tempo) e portanto, podemos resolver o exemplo 9.5, que é o nosso próximo slide.
 
 </div>
 

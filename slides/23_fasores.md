@@ -9,9 +9,9 @@ A forma retangular de um fasor é obtida pelas coordenadas cartesianas do ponto 
 <!-- _class: center transparent -->
 ![](https://i.imgur.com/wB3Df0c.png)
 
-E por isso, o fasor \\(⨈\\) é representado em sua forma retangular como:
+E por isso, o fasor \\(𝕍\\) é representado em sua forma retangular como:
 
-\\[ ⨈ = x + j y \\]
+\\[ 𝕍 = x + j y \\]
 
 </div>
 

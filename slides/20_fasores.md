@@ -21,13 +21,13 @@ Assim, podemos escrever \\(V(t)\\) como:
 
 **\\(r e^{j \phi}\\) também por si próprio é um número complexo e também é um fasor, por conter as informações da amplitude \\(r\\) da tensão e da fase \\(\phi\\) da tensão cossenoidal.**
 
-Assim, podemos chamar **\\(r e^{j \phi}\\) como o fasor \\(⨈ \\)** e portanto, a tensão \\(V(t)\\) pode ser escrita como:
+Assim, podemos chamar **\\(r e^{j \phi}\\) como o fasor \\(𝕍 \\)** e portanto, a tensão \\(V(t)\\) pode ser escrita como:
 
 \\[
-    V(t) = \Re\\{⨈ e^{j\omega t}\\}.
+    V(t) = \Re\\{𝕍 e^{j\omega t}\\}.
 \\]
 
-Que significa que \\(V(t)\\) é a parte real da função complexa resultante da multiplicação do fasor ⨈  por \\(e^{j(\omega t)}\\) e como sabemos, esta parte real, ao final da multiplicação, é dada por \\(r \cos(\omega t + \phi)\\).
+Que significa que \\(V(t)\\) é a parte real da função complexa resultante da multiplicação do fasor 𝕍  por \\(e^{j(\omega t)}\\) e como sabemos, esta parte real, ao final da multiplicação, é dada por \\(r \cos(\omega t + \phi)\\).
 
 **Por conveniência das nossas resoluções, escolheremos sempre a parte real das nossas exponenciais complexas — funções cosseno — e, por isso, não abordaremos suas partes imaginárias. Entretanto, nem por isso estamos livres de lidar com funções senos, por isso, veremos mais a frente identidades trigonométricas que habilitam a conversão de funções senos para cossenos.**
 
