@@ -4,7 +4,7 @@
 
 Quando analisamos nossas funções de onda tão somente pelas suas componentes senoidais (e/ou cossenoidais) lidamos com estas funções no domínio do tempo.
 
-Quando nossa função é do tipo \\(v(t) = V_{m} \cos(\omega t + \phi)\\), sabemos que podemos representar \\(\cos(\omega t + \phi)\\) como a parte real do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Re(V_{m} e^{j(\omega t + \phi)}) = \Re(𝕍 e^{\omega t}) \\). E quando é do tipo seno, sabemos que podemos representar nossa função seno como a parte imaginária do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Im(V_{m} e^{j(\omega t + \phi)}) = \Im(𝕍 e^{\omega t}) \\).
+Quando nossa função é do tipo \\(v(t) = V_{m} \cos(\omega t + \phi)\\), sabemos que podemos representar \\(\cos(\omega t + \phi)\\) como a parte real do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Re(V_{m} e^{j(\omega t + \phi)}) = \Re(𝕍 e^{j \omega t}) \\). E quando é do tipo seno, sabemos que podemos representar nossa função seno como a parte imaginária do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Im(V_{m} e^{j(\omega t + \phi)}) = \Im(𝕍 e^{j \omega t}) \\).
 
 Voltando ao começo da aula, a **parte real de** ou a **parte imaginária de** representam **TRANSFORMADAS FASORIAIS**. E existem as transformadas fasoriais inversas que produzem cossenos e senos a partir de números complexos.
 

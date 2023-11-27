@@ -139,6 +139,9 @@
   img[alt=slide-img] {
     width: 75%;
   }
+  img[alt=reduced-img] {
+    width: 40%;
+  }
 
   .dashedmargin {
     border-style: dashed;
@@ -149,6 +152,35 @@
     border-style: solid;
   }
 
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px dotted #7851a9;
+    color: #7851a9;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    top: 100%;
+    left: 50%;
+    margin-left: -150px;
+    background-color: #7851a9;
+    color: #fff;
+    text-align: justify;
+    border-radius: 6px;
+    padding: 5px 5px;
+    opacity: 0;
+
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
 
 </style>
 

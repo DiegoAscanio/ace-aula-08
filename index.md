@@ -139,6 +139,9 @@
   img[alt=slide-img] {
     width: 75%;
   }
+  img[alt=reduced-img] {
+    width: 40%;
+  }
 
   .dashedmargin {
     border-style: dashed;
@@ -149,6 +152,35 @@
     border-style: solid;
   }
 
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px dotted #7851a9;
+    color: #7851a9;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    top: 100%;
+    left: 50%;
+    margin-left: -150px;
+    background-color: #7851a9;
+    color: #fff;
+    text-align: justify;
+    border-radius: 6px;
+    padding: 5px 5px;
+    opacity: 0;
+
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
 
 </style>
 
@@ -986,7 +1018,7 @@ Quando analisarmos as grandezas de interesse nos circuitos excitados por apenas 
 
 Quando analisamos nossas funções de onda tão somente pelas suas componentes senoidais (e/ou cossenoidais) lidamos com estas funções no domínio do tempo.
 
-Quando nossa função é do tipo \\(v(t) = V_{m} \cos(\omega t + \phi)\\), sabemos que podemos representar \\(\cos(\omega t + \phi)\\) como a parte real do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Re(V_{m} e^{j(\omega t + \phi)}) = \Re(𝕍 e^{\omega t}) \\). E quando é do tipo seno, sabemos que podemos representar nossa função seno como a parte imaginária do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Im(V_{m} e^{j(\omega t + \phi)}) = \Im(𝕍 e^{\omega t}) \\).
+Quando nossa função é do tipo \\(v(t) = V_{m} \cos(\omega t + \phi)\\), sabemos que podemos representar \\(\cos(\omega t + \phi)\\) como a parte real do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Re(V_{m} e^{j(\omega t + \phi)}) = \Re(𝕍 e^{j \omega t}) \\). E quando é do tipo seno, sabemos que podemos representar nossa função seno como a parte imaginária do número complexo \\(e^{j(\omega t + \phi)}\\), ou seja, \\(v(t) = \Im(V_{m} e^{j(\omega t + \phi)}) = \Im(𝕍 e^{j \omega t}) \\).
 
 Voltando ao começo da aula, a **parte real de** ou a **parte imaginária de** representam **TRANSFORMADAS FASORIAIS**. E existem as transformadas fasoriais inversas que produzem cossenos e senos a partir de números complexos.
 
@@ -1083,3 +1115,397 @@ b) Resolva o problema usando o conceito de fasor.
 <center>
 <iframe width="727" height="409" src="https://www.youtube.com/embed/fbPHS42Dc8A" title="Me Salva! SEN07 - Soma Fasorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
+
+
+---
+
+<!-- _class: lead -->
+# Elementos Passivos no Domínio da Frequência
+
+
+---
+
+## Elementos Passivos no Domínio da Frequência
+
+### Revisão
+
+Como vimos nas aulas anteriores, elementos passivos de circuitos elétricos correspondem a resistores, capacitores e indutores. 
+
+- Esses elementos são caracterizados por suas relações entre tensão e corrente, que podem ser lineares ou não-lineares.
+- A relação entre tensão e corrente destes elementos — em circuitos estimulados por fontes senoidais, circuitos CA — recebe o nome de **impedância**.
+
+
+---
+
+<div style="text-align: justify; font-size: 20px;">
+<h2 style="font-size: 26px;">
+Elementos Passivos no Domínio da Frequência — Impedância
+</h2>
+
+<h3 style="font-size: 24px;">
+Impedância
+</h3>
+
+A impedância é uma propriedade resistiva que surge em elementos passivos de circuitos elétricos, que assim como a resistência (e portanto, medida em Ohms) caracteriza uma propriedade de oposição à passagem de corrente em um circuito elétrico, representada pela combinação da resistência (que afeta todas as formas de corrente elétrica) com a reatância (indutiva ou capacitiva, que afeta apenas correntes alternadas).
+
+<h4 style="font-size: 22px;">
+Importância da Impedância
+</h4>
+
+A impedância é crucial na análise de circuitos de corrente alternada (CA) porque ela determina como a corrente flui em resposta um estímulo de tensão (corrente) alternada oriundo de uma fonte senoidal.
+
+Diferentemente de circuitos de corrente contínua, onde apenas as resistências determinam o fluxo de corrente, em circuitos de corrente alternada, a reatância (indutiva ou capacitiva) também contribui (junto com a resistência) para determinar o fluxo de corrente.
+
+Entender a impedância permite a projetistas de circuitos elétricos prever como os circuitos irão se comportar em resposta a diferentes estímulos de tensão (corrente) alternada, e assim, projetar circuitos que se comportem de forma desejada.
+</div>
+
+
+---
+
+## Impedância Genérica
+
+A impedância de todos os elementos passivos de um circuito pode ser caracterizada por uma relação entre tensão e corrente dada por:
+
+\\[
+Z = \frac{V}{I}
+\\]
+
+### Impedância do Resistor
+
+A impedância \\(Z\\) do resistor é dada pela sua própria resistência \\(R\\), portanto:
+
+\\[
+    Z_{R} = R = \frac{V}{I}
+\\]
+
+
+---
+
+## Impedância do Resistor — Dedução
+
+<div class="footnotesize">
+
+Pela lei de Ohm, se a corrente em um resistor variar senoidalmente com o tempo — isto é, se \\(i = I_{m} \cos(\omega t + \theta_{i})\\) —, a tensão nos terminais do resistor será:
+
+\\[
+\begin{align}
+    v &= R \left[ I_{m} \cos(\omega t + \theta_{i}) \right] \\\\
+      &= R I_{m} \left[ \cos(\omega t + \theta_{i}) \right] 
+\end{align}
+\\]
+
+Onde \\(I_{m}\\) é a amplitude da corrente em apéres e \\(\theta_{i}\\) é o ângulo de fase da corrente. Podemos aplicar uma transformada fasorial em \\(v = R I_{m} \cos(\omega t + \theta_{i})\\) para obter um fasor 𝕀 para a corrente. Fazemos isso à partir do fato de que:
+
+\\[
+    v = R I_{m} \cos(\omega t + \theta_{i}) = I_{m} \Re \left[ e^{\theta_{i}} e^{j\omega t} \right] = \Re R \left[ I_{m} e^{\theta_{i}} e^{j \omega t} \right] 
+\\]
+
+E como sabemos, \\(𝕀 = I_{m} e^{\theta_{i}} = I_{m} \angle \theta_{i} \\), logo, \\(v = \Re R \left[ 𝕀 e^{j \omega t} \right] \\).
+
+Como \\(e^{\omega t}\\) se cancela na solução da EDOs que descreve o circuito **(ver 4ª observação da pág. 346 do livro do NILSSON 10ª ed.)** , podemos escrever um fasor 𝕍 para a tensão a partir do fasor 𝕀 como:
+
+\\[
+    𝕍 = R 𝕀
+\\]
+
+</div>
+
+<div class="footnotesize grid-50-50">
+
+<div class="grid-element">
+
+- A equação \\(𝕍 = R 𝕀\\) mostra que a tensão fasorial em um resistor é simplesmente a resistência multiplicada pela corrente fasorial.
+
+</div>
+
+<div class="grid-element">
+
+- Ainda podemos deduzir que nos terminais de um resistor não existe nenhum deslocamento de fase entre a tensão e a corrente, pois, se \\(𝕍 = R 𝕀\\), \\(𝕍 = V_{m} \angle {\theta_{v}}\\) e \\(𝕀 = I_{m} \angle {\theta_{i}}\\), logo, \\(V_{m} \angle {\theta_{v}} = R I_{m} \angle {\theta_{i}}\\), então, \\(V_{m} = R I_{m}\\) e \\(\theta_{v} = \theta_{i}\\).
+
+</div>
+
+</div>
+
+
+---
+
+## Impedância causada pela Indutância — Relação Tensão e Corrente em Um Indutor.
+
+<div class="scriptsize grid-50-50">
+
+<div class="grid-element solidmargin">
+
+Considerando uma corrente \\(i = I_{m} \cos(\omega t + \theta_{i})\\) circulando em um indutor, a tensão \\(v\\) nos terminais do indutor é dada por:
+
+\\[
+\begin{align}
+    v &= L \frac{di}{dt} = - \omega L I_{m} \sin(\sin \omega t + \theta_{i}) \therefore \\\\
+    v &= - \omega L I_{m} \cos(\sin \omega t + \theta_{i} - 90°)
+\end{align}
+\\]
+
+Considerando que na solução da equação que descreve a configuração indutiva o termo \\(e^{j \omega t}\\) é [cancelado](#38), a representação fasorial da tensão é dada por: 
+
+\\[
+\begin{align}
+    𝕍 &= - \omega L I_{m} e^{\left(j \theta_{i} - 90° \right)} \therefore \\\\
+      &= - \omega L I_{m} e^{j \theta_{i}} e^{-j 90°} \tag{1} \\\\
+    e^{-j 90°} &= \cos(-90°) + j \sin(-90°) = -j \tag{2} \\\\
+    \text{substituindo (2) em (1)} \\\\
+    𝕍 &= j \omega L I_{m} e^{j \theta_{i}} \therefore \\\\
+    𝕍 &= j \omega L 𝕀 \tag{3} \therefore \\\\
+    \text{Onde } 𝕀 &= I_{m} e^{j \theta_{i}}, \text{ a representação fasorial da corrente } \\\\
+\end{align}
+\\]
+
+<div class="grid-50-50">
+<div class="grid-element">
+
+Segundo a equação (3) o fasor tensão nos terminais de um indutor é igual a \\(j \omega L\\) vezes o fasor corrente, como ilustrado pela figura ao lado, que representa o circuito equivalente no domínio da frequência para um indutor:
+
+</div>
+<div class="grid-element">
+
+<!-- _class: center transparent -->
+![](https://i.imgur.com/gaD7rLA.png)
+
+</div>
+</div>
+
+
+</div>
+
+<div class="grid-element solidmargin">
+
+Considerando na equação (3) que \\(\omega L j\\) é um número complexo expresso em coordenadas retangulares, podemos pela equação de Euler escrever:
+
+\\[
+\begin{align}
+    \omega L e^{j \theta} = \omega L \left( \cos(\theta) + j \sin(\theta) \right) = \omega L j \tag{4}
+\end{align}
+\\]
+A equação (4) é verdadeira se, e somente se, \\(\theta = 90°\\). Assim: 
+\\[
+\omega L j = \omega L e^{j 90°} = \omega L \angle 90° \tag{5}
+\\]
+Substituindo (5) em (4) temos que \\(𝕍 = \omega L \angle 90° 𝕀\\) e como \\(𝕀 = I_{m} e^{j \theta_{i}} = I_{m} \angle \theta_{i} \\), logo: 
+
+\\[
+𝕍 = \omega L \angle 90° \times I_{m} \angle \theta_{i} = \omega L I_{m} \angle (90° + \theta_{i}) \tag{6}
+\\].
+
+O que indica que a tensão e a corrente do indutor estão defasadas em exatamente 90°, ou seja, <span class="tooltip">que a tensão está adiantada 90° em relação à corrente,<span class="tooltiptext">Também podemos expressar o deslocamento de fase em segundos onde T/4 = 90°.</span></span> o que corresponde ao comportamento de um indutor, que se opõe a variações instantâneas de corrente, como mostrado pela figura abaixo:
+
+<figure>
+
+<!-- _class: center transparent -->
+![reduced-img](https://i.imgur.com/E57neTY.png)
+
+<figcaption class="tiny" style="text-align: center;">
+
+Relação entre as fases da corrente e da tensão nos terminais de um indutor quando \\(\theta_{i} = 60°\\)
+
+</figcaption>
+</figure>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+---
+
+## Impedância causada pela Capacitância — Relação Tensão e Corrente em Um Capacitor.
+
+<div class="scriptsize grid-50-50">
+
+<div class="grid-element">
+
+Obtemos a relação entre os fasores de tensão e corrente nos terminais de um capacitor de maneira semelhante ao que fizemos para o indutor.
+
+Sabemos que a corrente de um capacitor é dada por \\(i = C \frac{dv}{dt}\\). Ao admitirmos que o nosso circuito é estimulado por uma fonte de tensão cossenoidal da forma \\(v = V_{m} \cos(\omega t + \theta_{v})\\), por conveniência das ferramentas matemáticas dos números complexos, adotamos a representação fasorial da tensão para calcular sua derivada e obter a corrente, também em sua notação fasorial, por assim termos aplicado para a tensão.
+
+Ao considerarmos a representação fasorial 𝕍 para a tensão, temos que \\(\frac{dv}{dt} = j \omega 𝕍\\). Portanto:
+
+\\[
+𝕀 = j \omega C 𝕍 \\\\
+\text{E a representação da tensão em função da corrente é dada por:} \\\\
+𝕍 = \frac{1}{j \omega C} 𝕀 \tag{7}
+\\]
+
+<div class="grid-66-33">
+
+<div class="grid-element">
+
+A equação (7) é a relação entre o fasor tensão e o fasor corrente em um capacitor, que possui um circuito equivalente no domínio da frequência como mostrado ao lado: 
+
+</div>
+
+<div class="grid-element">
+
+<!-- _class: transparent center -->
+![](https://i.imgur.com/i5dv5z9.png)
+
+</div>
+
+</div>
+
+</div>
+
+<div class="grid-element">
+
+Considere o número complexo \\(\frac{1}{j \omega C}\\) que já está expresso em coordenadas retangulares. Ele também pode ser reescrito como \\(\frac{1}{\omega C} \cdot \frac{1}{j}\\).
+
+Considere agora apenas \\(\frac{1}{j}\\). Multipliquemos este número por 1, na forma de \\(\frac{j}{j}\\). Assim:
+
+\\[
+\frac{1}{j} = \frac{j}{j} \cdot \frac{1}{j} = \frac{j}{j^2} = \frac{j}{-1} = -j
+\\]
+
+Logo, \\(\frac{1}{j} = -j\\), pois, \\(j^{2} = -1\\). Portanto, \\(\frac{1}{j \omega C} = - \frac{j}{\omega C}\\). Com isso, podemos escrever \\(\frac{1}{j \omega C}\\) como \\(- \frac{j}{\omega C}\\).
+
+Vamos agora expressar este número em coordenadas polares, para isso, devemos encontrar um angulo \\(\theta \text{ tal que } \frac{1}{\omega C} e^{j \theta} = \frac{1}{\omega C}\left( \cos(\theta) + j \sin(\theta) \right) = -j \omega C \\). Esta equação só pode ser satisfeita quando \\(\theta = - \frac{\pi}{2} = -90°\\). Logo, a forma exponencial de \\(- \frac{j}{\omega C}\\) é \\(\frac{1}{\omega C} e^{(j - 90°)}\\) e sua forma polar: \\(\frac{1}{\omega C} \angle -90°\\).
+
+Considerando que na equação \\(𝕍 = \frac{1}{j \omega C} 𝕀\\), que a representação polar de \\(\frac{1}{j \omega C}\\) é \\(\frac{1}{\omega C} \angle -90°\\) e a representação fasorial da corrente \\(𝕀\\) é \\(I_{m} \angle \theta_{i}°\\), podemos representar a tensão \\(𝕍\\) como uma multiplicação de números complexos em suas formas polares tal como:
+
+\\[
+\begin{align}
+𝕍 &= \frac{1}{\omega C} \angle -90° \cdot I_{m} \angle \theta_{i}° \therefore \\\\
+𝕍 &= \frac{I_{m}}{\omega C} \angle (\theta_{i} - 90°) \tag{8}
+\end{align}
+\\]
+
+</div>
+
+</div>
+
+
+---
+
+## Impedância causada pela Capacitância — Relação Tensão e Corrente em Um Capacitor.
+
+<div class="small grid-66-33">
+
+<div class="grid-element">
+
+Retomando a equação (8) da página anterior, temos que a tensão fasorial de um capacitor é dada por \\( 𝕍 = \frac{I_{m}}{\omega C} \angle (\theta_{i} - 90°) \\). Esta equação possibilita-nos algumas conclusões:
+
+1. A tensão do capacitor é atrasada em 90° em relação à sua corrente, o que corrobora o comportamento do capacitor de não admitir variações instantâneas de tensão.
+2. Se a tensão do capacitor é atrasada, logo, a corrente do capacitor está adiantada em 90° em relação à sua tensão.
+
+O gráfico ao lado ilustra a relação entre a tensão e a corrente em um capacitor:
+
+</div>
+
+<div class="grid-element">
+
+<!-- _class: transparent center -->
+![](https://i.imgur.com/7EKnP1G.png)
+
+<p style="text-align: center;">
+
+Gráfico mostrando a relação entre as fases da corrente e da tensão em um capacitor com ângulo de fase \\(\theta_{i} = 60°\\).
+
+</p>
+
+</div>
+
+</div>
+
+
+---
+
+<h2 style="font-size: 18px;">Impedância</h2>
+
+<div class="footnotesize">
+
+Como vimos, a relação tensão corrente de todos os elementos passivos de um circuito segue a forma:
+\\[
+𝕍 = Z𝕀
+\\]
+
+- No Resistor, a impedância Z é a própria resistência R do elemento, no indutor é o coeficiente \\(j \omega L\\) e no capacitor é o coeficiente \\(\frac{-j}{\omega C}\\)
+- No domínio da frequência, a impedância é análoga à resistência, à indutância e à capacitância no domínio do tempo.
+- A parte imaginária (o coeficiente que multiplica \\(j\\)) da impedância é denominada **reatância**.
+
+</div>
+
+<h2 style="font-size: 18px;">Admitância</h2>
+
+<div class="footnotesize"> 
+
+É a recíproca da impedância, denominada pela letra \\(Y\\), como:
+
+\\[
+Y = \frac{1}{Z} = (G + jB) \omega^{-1} (\text{Siemens})
+\\]
+
+A parte real \\(G\\) da admitância é denominada **condutância** e a parte imaginária \\(B\\) é denominada **susceptância**, ambas medidas em Siemens.
+
+</div>
+
+<h2 style="font-size: 18px; text-align: center;">Impedâncias e admitâncias dos elementos passivos.</h2>
+
+<div class="footnotesize">
+
+<!-- _class: ttable -->
+| Elemento  |     Impedância \\(Z\\)    |         Reatância         |      Admitância \\(Y\\)    |       Susceptância       |
+|:---------:|:-------------------------:|:-------------------------:|:--------------------------:|:------------------------:|
+| Resistor  |   \\(R\\) (resistência)   |             —             | \\(G = \frac{1}{R}\\)      |            —             |
+| Capacitor | \\(\frac{-j}{\omega C}\\) | \\(\frac{-1}{\omega C}\\) | \\(j \omega C\\)           | \\(\omega C\\)           |
+| Indutor   |     \\(j \omega L\\)      |       \\(\omega L\\)      | \\(\frac{-j}{\omega L}\\)  | \\(\frac{-1}{\omega L}\\)|
+
+</div>
+
+
+---
+
+## Técnicas de Análise de Circuitos
+
+<div class="regular">
+
+Todas as técnicas de análise de circuitos de corrente contínua, vistas ao longo do nosso curso, também se aplicam aos circuitos em regime permanente senoidal se considerarmos suas representações no domínio da frequência, ou seja, utilizando a análise fasorial.
+
+Desta forma, através da análise fasorial, aplicam-se:
+
+1. Os mesmos princípios das simplificações de resistências (agora para configurações de impedância);
+2. Transformações \\(\Delta - Y\\) e \\(Y - \Delta\\);
+3. Superposição linear.
+4. Lei de Ohm;
+5. Lei de kirchoff das tensões nas malhas;
+6. Lei de kirchoff das correntes nos nós;
+7. Transformações de fontes 
+8. Teoremas de thevenin e norton.
+
+Não serão abordados os desenvolvimentos destas técnicas, pois já foram abordados em outros capítulos. O que será feito é a aplicação destas técnicas para a análise de circuitos em regime permanente senoidal a partir da análise fasorial. O livro texto da disciplina (NILSSON 10ª edição) menciona estas técnicas nas Seções 9.5, 9.6 e 9.7 do capítulo 9, sendo necessária a leitura para entender adaptações necessárias, principalmente no contexto da combinação de impedâncias.
+
+Aqui encerra-se a matéria do curso de TÓPICOS ESPECIAIS EM SISTEMAS E PROCESSOS PRODUTIVOS: ANÁLISE DE CIRCUITOS ELÉTRICOS.
+
+</div>
+
+
+---
+
+## Lista de Exercícios 7
+
+Capítulo 9 do livro do Nilsson 10ª Edição (disponível também no acervo da biblioteca virtual pearson, que temos acesso):
+
+Exercícios 9.1, 9.9, 9.11, 9.13, 9.14, 9.15 e 9.30.
+
+
+---
+
+<div class="cabecalho large">
+Referências Bibliográficas
+</div>
+<div class="conteudo normal">
+
+- RIEDEL, SUSAN A.; NILSSON, James W. — Circuitos Elétricos 8ª ed. 2009.
+- RIEDEL, SUSAN A.; NILSSON, James W. — Circuitos Elétricos 10ª ed. 2015.
+- DE MELO, E. G. — Curso: LOM3202 - Circuitos Elétricos (2020). Accessed August 6, 2023. https://edisciplinas.usp.br/course/view.php?id=82680.
+- DE ARAÚJO, THABATTA M. A. - SLIDES E NOTAS DE AULAS - Disponível junto à profª Thabatta.
+
+</div>
