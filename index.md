@@ -206,10 +206,11 @@ CEFET-MG DIGDDV - Divinópolis, 2023.
 2. Resposta senoidal.
 3. O conceito de Fasor.
 4. Elementos passivos no domínio da frequência.
+5. Técnicas de Análise para circuitos CA.
+<!--
 5. As leis de Kirchhoff no domínio da frequência.
 6. Associações em série e em paralelo e transformações \\(\Delta\\) - Y.
 7. Equivalentes de Thévenin e de Norton.
-<!--
 8. Transformadores.
 9. Diagramas fasoriais.
 -->
