@@ -17,7 +17,7 @@ Assim, apresentamos a seguinte tabela de identidades:
 |             Função              |                            Equivalência                             |      Equivalência      |
 |:-------------------------------:|:--------------------------------------------------------------------|------------------------|
 |       \\(\sin(A \pm B)\\)       |                \\(\sin(A)\cos(B) \pm \cos(A)\sin(B)\\)              |                        |
-|       \\(\cos(A \pm B)\\)       |                \\(\cos(A)\cos(B) \pm \sin(A)\sin(B)\\)              |                        |
+|       \\(\cos(A \pm B)\\)       |                \\(\cos(A)\cos(B) \mp \sin(A)\sin(B)\\)              |                        |
 |  \\(\sin(\omega t \pm 180°)\\)  |    \\(\sin(\omega t) \cos(180°) \pm \cos(\omega t) \sin(180°)\\)    | \\(- \sin(\omega t)\\) |
 |  \\(\cos(\omega t \pm 180°)\\)  |    \\(\cos(\omega t) \cos(180°) \mp \sin(\omega t) \sin(180°)\\)    | \\(- \cos(\omega t)\\) |
 |  \\(\sin(\omega t \pm  90°)\\)  |    \\(\sin(\omega t) \cos( 90°) \pm \cos(\omega t) \sin( 90°)\\)    |\\(\pm \cos(\omega t)\\)|
